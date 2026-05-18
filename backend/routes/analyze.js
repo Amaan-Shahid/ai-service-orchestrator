@@ -1,6 +1,7 @@
 const express = require("express");
 
 const extractIntent = require("../agents/intentAgent");
+const matchProviders = require("../agents/providerAgent");
 
 const router = express.Router();
 
@@ -8,9 +9,20 @@ router.post("/", async (req, res) => {
   try {
     const { message } = req.body;
 
-    const extractedData = await extractIntent(message);
+    if (!message) {
+      return res.status(400).json({
+        error: "message is required",
+      });
+    }
 
-    res.json(extractedData);
+    const intent = await extractIntent(message);
+    const providers = matchProviders(intent);
+
+    res.json({
+      intent,
+      providers,
+      total: providers.length,
+    });
   } catch (error) {
     console.error(error);
 

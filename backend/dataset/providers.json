@@ -1,0 +1,1700 @@
+{
+  "providers": [
+    {
+      "id": 1,
+      "name": "Muhammad Arif Khan",
+      "service": "AC Technician",
+      "location": "G-13",
+      "rating": 4.8,
+      "distance_km": 1.2,
+      "available": true,
+      "experience_years": 8,
+      "languages": [
+        "Urdu",
+        "English",
+        "Punjabi"
+      ],
+      "phone": "0300-1234567",
+      "response_time_minutes": 25,
+      "completed_jobs": 312
+    },
+    {
+      "id": 2,
+      "name": "Tariq Mehmood",
+      "service": "AC Technician",
+      "location": "G-11",
+      "rating": 4.5,
+      "distance_km": 3.4,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0311-2345678",
+      "response_time_minutes": 40,
+      "completed_jobs": 189
+    },
+    {
+      "id": 3,
+      "name": "Ali AC Services (Usman Ali)",
+      "service": "AC Technician",
+      "location": "G-10",
+      "rating": 4.9,
+      "distance_km": 2.1,
+      "available": true,
+      "experience_years": 12,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0321-3456789",
+      "response_time_minutes": 20,
+      "completed_jobs": 541
+    },
+    {
+      "id": 4,
+      "name": "Sajid Hussain",
+      "service": "AC Technician",
+      "location": "F-8",
+      "rating": 4.2,
+      "distance_km": 5.7,
+      "available": false,
+      "experience_years": 3,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0333-4567890",
+      "response_time_minutes": 60,
+      "completed_jobs": 87
+    },
+    {
+      "id": 5,
+      "name": "CoolTech HVAC (Rizwan Akhtar)",
+      "service": "AC Technician",
+      "location": "Bahria Town",
+      "rating": 4.7,
+      "distance_km": 8.3,
+      "available": true,
+      "experience_years": 15,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0345-5678901",
+      "response_time_minutes": 35,
+      "completed_jobs": 720
+    },
+    {
+      "id": 6,
+      "name": "Nadeem Rafiq",
+      "service": "AC Technician",
+      "location": "DHA",
+      "rating": 4.6,
+      "distance_km": 10.1,
+      "available": true,
+      "experience_years": 10,
+      "languages": [
+        "Urdu",
+        "English",
+        "Pashto"
+      ],
+      "phone": "0301-6789012",
+      "response_time_minutes": 30,
+      "completed_jobs": 403
+    },
+    {
+      "id": 7,
+      "name": "Rehan AC & Refrigeration",
+      "service": "AC Technician",
+      "location": "H-13",
+      "rating": 4.4,
+      "distance_km": 4.2,
+      "available": true,
+      "experience_years": 7,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0354-0123439",
+      "response_time_minutes": 35,
+      "completed_jobs": 278
+    },
+    {
+      "id": 8,
+      "name": "FrostFix (Imtiaz Baig)",
+      "service": "AC Technician",
+      "location": "I-8",
+      "rating": 4.3,
+      "distance_km": 5.0,
+      "available": true,
+      "experience_years": 4,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0312-9988771",
+      "response_time_minutes": 50,
+      "completed_jobs": 134
+    },
+    {
+      "id": 9,
+      "name": "IceCool Services (Naveed Shah)",
+      "service": "AC Technician",
+      "location": "F-10",
+      "rating": 4.6,
+      "distance_km": 6.5,
+      "available": false,
+      "experience_years": 9,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0322-8877665",
+      "response_time_minutes": 40,
+      "completed_jobs": 367
+    },
+    {
+      "id": 10,
+      "name": "Arctic Cool (Asim Raza)",
+      "service": "AC Technician",
+      "location": "Satellite Town",
+      "rating": 3.9,
+      "distance_km": 7.8,
+      "available": true,
+      "experience_years": 2,
+      "languages": [
+        "Urdu",
+        "Pashto"
+      ],
+      "phone": "0334-7766554",
+      "response_time_minutes": 70,
+      "completed_jobs": 58
+    },
+    {
+      "id": 11,
+      "name": "CoolBreeze AC (Kamran Ashraf)",
+      "service": "AC Technician",
+      "location": "G-11",
+      "rating": 4.5,
+      "distance_km": 2.7,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0315-5544332",
+      "response_time_minutes": 30,
+      "completed_jobs": 231
+    },
+    {
+      "id": 12,
+      "name": "SnowFlake HVAC (Bilal Chaudhry)",
+      "service": "AC Technician",
+      "location": "Saddar",
+      "rating": 4.0,
+      "distance_km": 8.8,
+      "available": true,
+      "experience_years": 3,
+      "languages": [
+        "Urdu",
+        "Pashto"
+      ],
+      "phone": "0325-4433221",
+      "response_time_minutes": 60,
+      "completed_jobs": 98
+    },
+    {
+      "id": 13,
+      "name": "Ghulam Mustafa",
+      "service": "Electrician",
+      "location": "G-13",
+      "rating": 4.7,
+      "distance_km": 0.8,
+      "available": true,
+      "experience_years": 9,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0312-7890123",
+      "response_time_minutes": 20,
+      "completed_jobs": 298
+    },
+    {
+      "id": 14,
+      "name": "Waqar Electric Works (Waqar Ahmed)",
+      "service": "Electrician",
+      "location": "G-11",
+      "rating": 4.9,
+      "distance_km": 2.9,
+      "available": true,
+      "experience_years": 14,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0322-8901234",
+      "response_time_minutes": 15,
+      "completed_jobs": 612
+    },
+    {
+      "id": 15,
+      "name": "Irfan Malik",
+      "service": "Electrician",
+      "location": "F-10",
+      "rating": 3.9,
+      "distance_km": 6.2,
+      "available": true,
+      "experience_years": 2,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0334-9012345",
+      "response_time_minutes": 75,
+      "completed_jobs": 45
+    },
+    {
+      "id": 16,
+      "name": "Shahid Electrical (Shahid Nawaz)",
+      "service": "Electrician",
+      "location": "I-8",
+      "rating": 4.5,
+      "distance_km": 4.4,
+      "available": false,
+      "experience_years": 7,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0346-0123456",
+      "response_time_minutes": 30,
+      "completed_jobs": 234
+    },
+    {
+      "id": 17,
+      "name": "PowerPro (Kamran Zafar)",
+      "service": "Electrician",
+      "location": "DHA",
+      "rating": 4.8,
+      "distance_km": 11.5,
+      "available": true,
+      "experience_years": 18,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0302-1234560",
+      "response_time_minutes": 25,
+      "completed_jobs": 890
+    },
+    {
+      "id": 18,
+      "name": "Farooq Ahmed",
+      "service": "Electrician",
+      "location": "Saddar",
+      "rating": 4.3,
+      "distance_km": 7.8,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu",
+        "Pashto"
+      ],
+      "phone": "0313-2345601",
+      "response_time_minutes": 50,
+      "completed_jobs": 178
+    },
+    {
+      "id": 19,
+      "name": "Electro Safe (Tahir Javed)",
+      "service": "Electrician",
+      "location": "H-13",
+      "rating": 4.6,
+      "distance_km": 4.6,
+      "available": true,
+      "experience_years": 8,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0310-1234540",
+      "response_time_minutes": 30,
+      "completed_jobs": 312
+    },
+    {
+      "id": 20,
+      "name": "FixIt All (Mubashir Rehman)",
+      "service": "Electrician",
+      "location": "Satellite Town",
+      "rating": 4.3,
+      "distance_km": 7.2,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0343-3456742",
+      "response_time_minutes": 55,
+      "completed_jobs": 167
+    },
+    {
+      "id": 21,
+      "name": "VoltGuard (Saeed Anwar)",
+      "service": "Electrician",
+      "location": "Bahria Town",
+      "rating": 4.7,
+      "distance_km": 9.3,
+      "available": true,
+      "experience_years": 13,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0323-5544332",
+      "response_time_minutes": 40,
+      "completed_jobs": 478
+    },
+    {
+      "id": 22,
+      "name": "SparkLine Electric (Adnan Butt)",
+      "service": "Electrician",
+      "location": "F-8",
+      "rating": 4.4,
+      "distance_km": 5.8,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0344-4433221",
+      "response_time_minutes": 35,
+      "completed_jobs": 219
+    },
+    {
+      "id": 23,
+      "name": "WireWise (Hamza Latif)",
+      "service": "Electrician",
+      "location": "G-13",
+      "rating": 4.5,
+      "distance_km": 1.0,
+      "available": true,
+      "experience_years": 7,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0336-3322110",
+      "response_time_minutes": 25,
+      "completed_jobs": 289
+    },
+    {
+      "id": 24,
+      "name": "BrightSpark (Omar Hayat)",
+      "service": "Electrician",
+      "location": "G-10",
+      "rating": 4.6,
+      "distance_km": 2.4,
+      "available": false,
+      "experience_years": 8,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0346-2211009",
+      "response_time_minutes": 30,
+      "completed_jobs": 345
+    },
+    {
+      "id": 25,
+      "name": "Nasir Plumbing (Nasir Iqbal)",
+      "service": "Plumber",
+      "location": "G-13",
+      "rating": 4.6,
+      "distance_km": 1.5,
+      "available": true,
+      "experience_years": 11,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0323-3456702",
+      "response_time_minutes": 30,
+      "completed_jobs": 445
+    },
+    {
+      "id": 26,
+      "name": "Bilal Ahmad",
+      "service": "Plumber",
+      "location": "G-10",
+      "rating": 4.4,
+      "distance_km": 3.0,
+      "available": true,
+      "experience_years": 4,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0335-4567803",
+      "response_time_minutes": 45,
+      "completed_jobs": 132
+    },
+    {
+      "id": 27,
+      "name": "Master Plumbers (Asif Raza)",
+      "service": "Plumber",
+      "location": "F-8",
+      "rating": 4.9,
+      "distance_km": 5.1,
+      "available": true,
+      "experience_years": 20,
+      "languages": [
+        "Urdu",
+        "English",
+        "Punjabi"
+      ],
+      "phone": "0347-5678904",
+      "response_time_minutes": 20,
+      "completed_jobs": 1023
+    },
+    {
+      "id": 28,
+      "name": "Zubair Hussain",
+      "service": "Plumber",
+      "location": "H-13",
+      "rating": 3.7,
+      "distance_km": 4.8,
+      "available": false,
+      "experience_years": 2,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0303-6789005",
+      "response_time_minutes": 90,
+      "completed_jobs": 38
+    },
+    {
+      "id": 29,
+      "name": "AquaFix (Hamid Saleem)",
+      "service": "Plumber",
+      "location": "Bahria Town",
+      "rating": 4.7,
+      "distance_km": 9.2,
+      "available": true,
+      "experience_years": 13,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0314-7890106",
+      "response_time_minutes": 35,
+      "completed_jobs": 567
+    },
+    {
+      "id": 30,
+      "name": "Rashid Khan",
+      "service": "Plumber",
+      "location": "Satellite Town",
+      "rating": 4.1,
+      "distance_km": 6.6,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "Pashto"
+      ],
+      "phone": "0324-8901207",
+      "response_time_minutes": 55,
+      "completed_jobs": 156
+    },
+    {
+      "id": 31,
+      "name": "Speedy Plumb (Asad Mehmood)",
+      "service": "Plumber",
+      "location": "I-8",
+      "rating": 4.5,
+      "distance_km": 5.3,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0331-2345641",
+      "response_time_minutes": 40,
+      "completed_jobs": 221
+    },
+    {
+      "id": 32,
+      "name": "DrainPro (Fawad Mirza)",
+      "service": "Plumber",
+      "location": "DHA",
+      "rating": 4.8,
+      "distance_km": 12.4,
+      "available": true,
+      "experience_years": 16,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0332-6655443",
+      "response_time_minutes": 45,
+      "completed_jobs": 634
+    },
+    {
+      "id": 33,
+      "name": "PipeMax (Rizwan Khalid)",
+      "service": "Plumber",
+      "location": "G-11",
+      "rating": 4.3,
+      "distance_km": 3.6,
+      "available": true,
+      "experience_years": 7,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0341-5544332",
+      "response_time_minutes": 35,
+      "completed_jobs": 287
+    },
+    {
+      "id": 34,
+      "name": "WaterWorks (Tariq Bashir)",
+      "service": "Plumber",
+      "location": "F-10",
+      "rating": 3.8,
+      "distance_km": 7.1,
+      "available": false,
+      "experience_years": 3,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0352-4433221",
+      "response_time_minutes": 80,
+      "completed_jobs": 72
+    },
+    {
+      "id": 35,
+      "name": "PipeRight (Farhan Yusuf)",
+      "service": "Plumber",
+      "location": "G-13",
+      "rating": 4.4,
+      "distance_km": 1.9,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0327-9988776",
+      "response_time_minutes": 35,
+      "completed_jobs": 198
+    },
+    {
+      "id": 36,
+      "name": "FixFlow (Khalid Mehmood)",
+      "service": "Plumber",
+      "location": "DHA",
+      "rating": 4.6,
+      "distance_km": 13.7,
+      "available": true,
+      "experience_years": 11,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0337-8877665",
+      "response_time_minutes": 50,
+      "completed_jobs": 423
+    },
+    {
+      "id": 37,
+      "name": "Sir Fahad (Math & Science)",
+      "service": "Tutor",
+      "location": "G-13",
+      "rating": 4.9,
+      "distance_km": 0.5,
+      "available": true,
+      "experience_years": 7,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0336-9012308",
+      "response_time_minutes": 60,
+      "completed_jobs": 210
+    },
+    {
+      "id": 38,
+      "name": "Zara Noor (O/A Levels)",
+      "service": "Tutor",
+      "location": "F-8",
+      "rating": 5.0,
+      "distance_km": 5.9,
+      "available": true,
+      "experience_years": 9,
+      "languages": [
+        "English",
+        "Urdu"
+      ],
+      "phone": "0348-0123409",
+      "response_time_minutes": 120,
+      "completed_jobs": 340
+    },
+    {
+      "id": 39,
+      "name": "Usman Tutor Center (Usman Ghani)",
+      "service": "Tutor",
+      "location": "G-11",
+      "rating": 4.6,
+      "distance_km": 3.1,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0304-1234510",
+      "response_time_minutes": 90,
+      "completed_jobs": 145
+    },
+    {
+      "id": 40,
+      "name": "Ayesha Siddiqui (Primary)",
+      "service": "Tutor",
+      "location": "DHA",
+      "rating": 4.8,
+      "distance_km": 12.3,
+      "available": false,
+      "experience_years": 11,
+      "languages": [
+        "English",
+        "Urdu"
+      ],
+      "phone": "0315-2345611",
+      "response_time_minutes": 180,
+      "completed_jobs": 289
+    },
+    {
+      "id": 41,
+      "name": "Imran Bhai Tutor",
+      "service": "Tutor",
+      "location": "Satellite Town",
+      "rating": 4.0,
+      "distance_km": 7.4,
+      "available": true,
+      "experience_years": 3,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0325-3456712",
+      "response_time_minutes": 60,
+      "completed_jobs": 78
+    },
+    {
+      "id": 42,
+      "name": "EduHome (Saima Khalid)",
+      "service": "Tutor",
+      "location": "Bahria Town",
+      "rating": 4.7,
+      "distance_km": 9.8,
+      "available": true,
+      "experience_years": 8,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0316-7788990",
+      "response_time_minutes": 120,
+      "completed_jobs": 198
+    },
+    {
+      "id": 43,
+      "name": "BrainBoost (Hassan Raza)",
+      "service": "Tutor",
+      "location": "G-10",
+      "rating": 4.5,
+      "distance_km": 2.8,
+      "available": true,
+      "experience_years": 4,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0326-6677889",
+      "response_time_minutes": 60,
+      "completed_jobs": 122
+    },
+    {
+      "id": 44,
+      "name": "Ms. Rukhsana (Biology/Chemistry)",
+      "service": "Tutor",
+      "location": "I-8",
+      "rating": 4.6,
+      "distance_km": 4.7,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0337-5566778",
+      "response_time_minutes": 90,
+      "completed_jobs": 163
+    },
+    {
+      "id": 45,
+      "name": "TopGrade Academy (Ali Hassan)",
+      "service": "Tutor",
+      "location": "F-10",
+      "rating": 4.9,
+      "distance_km": 6.3,
+      "available": false,
+      "experience_years": 14,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0347-4455667",
+      "response_time_minutes": 180,
+      "completed_jobs": 421
+    },
+    {
+      "id": 46,
+      "name": "Sir Danish (Physics/Maths)",
+      "service": "Tutor",
+      "location": "H-13",
+      "rating": 4.7,
+      "distance_km": 4.1,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0307-1100998",
+      "response_time_minutes": 90,
+      "completed_jobs": 176
+    },
+    {
+      "id": 47,
+      "name": "HomeTutor Network (Sadia Farooq)",
+      "service": "Tutor",
+      "location": "Saddar",
+      "rating": 4.3,
+      "distance_km": 8.0,
+      "available": true,
+      "experience_years": 3,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0317-0099887",
+      "response_time_minutes": 120,
+      "completed_jobs": 89
+    },
+    {
+      "id": 48,
+      "name": "QuickLearn (Omer Farooq)",
+      "service": "Tutor",
+      "location": "F-8",
+      "rating": 4.4,
+      "distance_km": 6.0,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0327-8899001",
+      "response_time_minutes": 60,
+      "completed_jobs": 134
+    },
+    {
+      "id": 49,
+      "name": "Sana Beauty Parlour (Sana Malik)",
+      "service": "Beautician",
+      "location": "G-13",
+      "rating": 4.7,
+      "distance_km": 1.1,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0337-4567813",
+      "response_time_minutes": 45,
+      "completed_jobs": 402
+    },
+    {
+      "id": 50,
+      "name": "Hina Bridal Studio (Hina Fatima)",
+      "service": "Beautician",
+      "location": "F-10",
+      "rating": 4.9,
+      "distance_km": 6.8,
+      "available": true,
+      "experience_years": 12,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0349-5678914",
+      "response_time_minutes": 60,
+      "completed_jobs": 678
+    },
+    {
+      "id": 51,
+      "name": "Nadia Home Services",
+      "service": "Beautician",
+      "location": "Bahria Town",
+      "rating": 4.5,
+      "distance_km": 9.7,
+      "available": false,
+      "experience_years": 4,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0305-6789015",
+      "response_time_minutes": 30,
+      "completed_jobs": 189
+    },
+    {
+      "id": 52,
+      "name": "Rubina Beauty Expert",
+      "service": "Beautician",
+      "location": "I-8",
+      "rating": 4.3,
+      "distance_km": 5.2,
+      "available": true,
+      "experience_years": 3,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0316-7890116",
+      "response_time_minutes": 40,
+      "completed_jobs": 112
+    },
+    {
+      "id": 53,
+      "name": "GlowUp (Mariam Tahir)",
+      "service": "Beautician",
+      "location": "DHA",
+      "rating": 4.8,
+      "distance_km": 13.0,
+      "available": true,
+      "experience_years": 8,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0326-8901217",
+      "response_time_minutes": 90,
+      "completed_jobs": 523
+    },
+    {
+      "id": 54,
+      "name": "BeautyBliss (Farah Naz)",
+      "service": "Beautician",
+      "location": "G-11",
+      "rating": 4.4,
+      "distance_km": 3.3,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0327-3344556",
+      "response_time_minutes": 50,
+      "completed_jobs": 234
+    },
+    {
+      "id": 55,
+      "name": "Glamour Zone (Shabnam Iqbal)",
+      "service": "Beautician",
+      "location": "Saddar",
+      "rating": 4.2,
+      "distance_km": 8.6,
+      "available": true,
+      "experience_years": 4,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0338-2233445",
+      "response_time_minutes": 30,
+      "completed_jobs": 156
+    },
+    {
+      "id": 56,
+      "name": "Luxe Beauty (Amna Sheikh)",
+      "service": "Beautician",
+      "location": "F-8",
+      "rating": 4.9,
+      "distance_km": 6.1,
+      "available": true,
+      "experience_years": 10,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0348-1122334",
+      "response_time_minutes": 60,
+      "completed_jobs": 589
+    },
+    {
+      "id": 57,
+      "name": "PinkGlow (Ayesha Waheed)",
+      "service": "Beautician",
+      "location": "G-10",
+      "rating": 4.5,
+      "distance_km": 2.5,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0358-0011223",
+      "response_time_minutes": 40,
+      "completed_jobs": 198
+    },
+    {
+      "id": 58,
+      "name": "Khalid Wood Works",
+      "service": "Carpenter",
+      "location": "G-13",
+      "rating": 4.6,
+      "distance_km": 2.0,
+      "available": true,
+      "experience_years": 16,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0338-9012318",
+      "response_time_minutes": 60,
+      "completed_jobs": 378
+    },
+    {
+      "id": 59,
+      "name": "Master Carpenter (Javed Iqbal)",
+      "service": "Carpenter",
+      "location": "G-10",
+      "rating": 4.8,
+      "distance_km": 3.3,
+      "available": true,
+      "experience_years": 22,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0350-0123419",
+      "response_time_minutes": 45,
+      "completed_jobs": 891
+    },
+    {
+      "id": 60,
+      "name": "Furniture Fix (Aamir Shafiq)",
+      "service": "Carpenter",
+      "location": "F-8",
+      "rating": 4.4,
+      "distance_km": 6.0,
+      "available": false,
+      "experience_years": 7,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0306-1234520",
+      "response_time_minutes": 120,
+      "completed_jobs": 203
+    },
+    {
+      "id": 61,
+      "name": "WoodCraft Pro (Shoaib Nazar)",
+      "service": "Carpenter",
+      "location": "Bahria Town",
+      "rating": 4.9,
+      "distance_km": 10.5,
+      "available": true,
+      "experience_years": 18,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0317-2345621",
+      "response_time_minutes": 90,
+      "completed_jobs": 652
+    },
+    {
+      "id": 62,
+      "name": "Bashir Carpenter",
+      "service": "Carpenter",
+      "location": "Saddar",
+      "rating": 3.8,
+      "distance_km": 8.1,
+      "available": true,
+      "experience_years": 4,
+      "languages": [
+        "Urdu",
+        "Pashto"
+      ],
+      "phone": "0327-3456722",
+      "response_time_minutes": 90,
+      "completed_jobs": 67
+    },
+    {
+      "id": 63,
+      "name": "CarpenTech (Zafar Iqbal)",
+      "service": "Carpenter",
+      "location": "I-8",
+      "rating": 4.5,
+      "distance_km": 5.6,
+      "available": false,
+      "experience_years": 9,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0311-5678944",
+      "response_time_minutes": 75,
+      "completed_jobs": 243
+    },
+    {
+      "id": 64,
+      "name": "TimberKing (Munawar Hussain)",
+      "service": "Carpenter",
+      "location": "DHA",
+      "rating": 4.7,
+      "distance_km": 13.5,
+      "available": true,
+      "experience_years": 20,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0328-9988776",
+      "response_time_minutes": 60,
+      "completed_jobs": 712
+    },
+    {
+      "id": 65,
+      "name": "CraftWork (Pervaiz Ahmad)",
+      "service": "Carpenter",
+      "location": "H-13",
+      "rating": 4.2,
+      "distance_km": 5.0,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0339-8877665",
+      "response_time_minutes": 80,
+      "completed_jobs": 143
+    },
+    {
+      "id": 66,
+      "name": "CarpenterPlus (Aslam Gul)",
+      "service": "Carpenter",
+      "location": "G-11",
+      "rating": 4.3,
+      "distance_km": 3.9,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "Pashto"
+      ],
+      "phone": "0347-7766554",
+      "response_time_minutes": 90,
+      "completed_jobs": 134
+    },
+    {
+      "id": 67,
+      "name": "JoineryPro (Naseer Ahmad)",
+      "service": "Carpenter",
+      "location": "F-10",
+      "rating": 4.6,
+      "distance_km": 6.7,
+      "available": false,
+      "experience_years": 10,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0357-6655443",
+      "response_time_minutes": 70,
+      "completed_jobs": 302
+    },
+    {
+      "id": 68,
+      "name": "ColorMaster (Zeeshan Butt)",
+      "service": "Painter",
+      "location": "G-13",
+      "rating": 4.7,
+      "distance_km": 1.8,
+      "available": true,
+      "experience_years": 10,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0339-4567823",
+      "response_time_minutes": 30,
+      "completed_jobs": 267
+    },
+    {
+      "id": 69,
+      "name": "Sunny Painters (Sunny Masih)",
+      "service": "Painter",
+      "location": "G-11",
+      "rating": 4.5,
+      "distance_km": 3.7,
+      "available": true,
+      "experience_years": 8,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0351-5678924",
+      "response_time_minutes": 60,
+      "completed_jobs": 334
+    },
+    {
+      "id": 70,
+      "name": "ProPaint (Haroon Rasheed)",
+      "service": "Painter",
+      "location": "DHA",
+      "rating": 4.9,
+      "distance_km": 12.6,
+      "available": true,
+      "experience_years": 15,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0307-6789025",
+      "response_time_minutes": 45,
+      "completed_jobs": 489
+    },
+    {
+      "id": 71,
+      "name": "Anwar Painters",
+      "service": "Painter",
+      "location": "Satellite Town",
+      "rating": 3.9,
+      "distance_km": 7.0,
+      "available": false,
+      "experience_years": 3,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0318-7890126",
+      "response_time_minutes": 120,
+      "completed_jobs": 55
+    },
+    {
+      "id": 72,
+      "name": "Elite Painters (Faisal Qureshi)",
+      "service": "Painter",
+      "location": "F-10",
+      "rating": 4.6,
+      "distance_km": 6.4,
+      "available": true,
+      "experience_years": 12,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0328-8901227",
+      "response_time_minutes": 60,
+      "completed_jobs": 301
+    },
+    {
+      "id": 73,
+      "name": "Royal Painters (Saqlain Mushtaq)",
+      "service": "Painter",
+      "location": "Bahria Town",
+      "rating": 4.7,
+      "distance_km": 10.8,
+      "available": true,
+      "experience_years": 14,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0355-4567843",
+      "response_time_minutes": 60,
+      "completed_jobs": 398
+    },
+    {
+      "id": 74,
+      "name": "FreshCoat (Akbar Ali)",
+      "service": "Painter",
+      "location": "I-8",
+      "rating": 4.3,
+      "distance_km": 5.4,
+      "available": true,
+      "experience_years": 7,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0329-7766554",
+      "response_time_minutes": 50,
+      "completed_jobs": 198
+    },
+    {
+      "id": 75,
+      "name": "BrushPro (Ikram Ul Haq)",
+      "service": "Painter",
+      "location": "F-8",
+      "rating": 4.5,
+      "distance_km": 6.9,
+      "available": true,
+      "experience_years": 9,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0340-6655443",
+      "response_time_minutes": 45,
+      "completed_jobs": 276
+    },
+    {
+      "id": 76,
+      "name": "WallArt (Noman Siddiqui)",
+      "service": "Painter",
+      "location": "Saddar",
+      "rating": 3.7,
+      "distance_km": 8.9,
+      "available": false,
+      "experience_years": 2,
+      "languages": [
+        "Urdu",
+        "Pashto"
+      ],
+      "phone": "0350-5544332",
+      "response_time_minutes": 100,
+      "completed_jobs": 43
+    },
+    {
+      "id": 77,
+      "name": "DynaCoat Painters (Imran Arshad)",
+      "service": "Painter",
+      "location": "G-13",
+      "rating": 4.4,
+      "distance_km": 1.4,
+      "available": true,
+      "experience_years": 8,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0300-4433221",
+      "response_time_minutes": 40,
+      "completed_jobs": 234
+    },
+    {
+      "id": 78,
+      "name": "SwiftPaint (Yasir Shah)",
+      "service": "Painter",
+      "location": "H-13",
+      "rating": 4.2,
+      "distance_km": 4.4,
+      "available": true,
+      "experience_years": 4,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0310-3322110",
+      "response_time_minutes": 60,
+      "completed_jobs": 156
+    },
+    {
+      "id": 79,
+      "name": "SmartFix Mobile (Adeel Aslam)",
+      "service": "Mobile Repair",
+      "location": "G-13",
+      "rating": 4.8,
+      "distance_km": 0.9,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0340-9012328",
+      "response_time_minutes": 15,
+      "completed_jobs": 823
+    },
+    {
+      "id": 80,
+      "name": "TechRepair (Hassan Ali)",
+      "service": "Mobile Repair",
+      "location": "G-11",
+      "rating": 4.6,
+      "distance_km": 3.5,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "English",
+        "Punjabi"
+      ],
+      "phone": "0352-0123429",
+      "response_time_minutes": 20,
+      "completed_jobs": 567
+    },
+    {
+      "id": 81,
+      "name": "Saddar Mobile Clinic",
+      "service": "Mobile Repair",
+      "location": "Saddar",
+      "rating": 4.4,
+      "distance_km": 8.4,
+      "available": true,
+      "experience_years": 9,
+      "languages": [
+        "Urdu",
+        "Pashto",
+        "Punjabi"
+      ],
+      "phone": "0308-1234530",
+      "response_time_minutes": 25,
+      "completed_jobs": 1102
+    },
+    {
+      "id": 82,
+      "name": "iRepair Pro (Zohaib Latif)",
+      "service": "Mobile Repair",
+      "location": "DHA",
+      "rating": 4.9,
+      "distance_km": 14.2,
+      "available": false,
+      "experience_years": 11,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0319-2345631",
+      "response_time_minutes": 30,
+      "completed_jobs": 744
+    },
+    {
+      "id": 83,
+      "name": "PhoneDoctor (Waheed Anjum)",
+      "service": "Mobile Repair",
+      "location": "I-8",
+      "rating": 4.3,
+      "distance_km": 4.9,
+      "available": true,
+      "experience_years": 4,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0329-3456732",
+      "response_time_minutes": 20,
+      "completed_jobs": 389
+    },
+    {
+      "id": 84,
+      "name": "ScreenFix (Junaid Awan)",
+      "service": "Mobile Repair",
+      "location": "Bahria Town",
+      "rating": 4.5,
+      "distance_km": 10.3,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0330-4433221",
+      "response_time_minutes": 30,
+      "completed_jobs": 312
+    },
+    {
+      "id": 85,
+      "name": "GadgetGuru (Sohail Baig)",
+      "service": "Mobile Repair",
+      "location": "F-8",
+      "rating": 4.7,
+      "distance_km": 6.7,
+      "available": true,
+      "experience_years": 7,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0341-3322110",
+      "response_time_minutes": 25,
+      "completed_jobs": 478
+    },
+    {
+      "id": 86,
+      "name": "MobileMaster (Qasim Rauf)",
+      "service": "Mobile Repair",
+      "location": "G-10",
+      "rating": 4.2,
+      "distance_km": 2.6,
+      "available": true,
+      "experience_years": 3,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0351-2211009",
+      "response_time_minutes": 20,
+      "completed_jobs": 267
+    },
+    {
+      "id": 87,
+      "name": "ByteFix (Ahsan Gillani)",
+      "service": "Mobile Repair",
+      "location": "H-13",
+      "rating": 4.4,
+      "distance_km": 4.5,
+      "available": false,
+      "experience_years": 5,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0342-1100998",
+      "response_time_minutes": 35,
+      "completed_jobs": 198
+    },
+    {
+      "id": 88,
+      "name": "PixelFix (Usman Tariq)",
+      "service": "Mobile Repair",
+      "location": "Satellite Town",
+      "rating": 4.3,
+      "distance_km": 7.5,
+      "available": true,
+      "experience_years": 3,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0340-2211009",
+      "response_time_minutes": 30,
+      "completed_jobs": 178
+    },
+    {
+      "id": 89,
+      "name": "RepairZone (Bilal Rana)",
+      "service": "Mobile Repair",
+      "location": "F-10",
+      "rating": 4.5,
+      "distance_km": 6.1,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0307-1100887",
+      "response_time_minutes": 20,
+      "completed_jobs": 345
+    },
+    {
+      "id": 90,
+      "name": "CleanHome (Shahnaz Begum)",
+      "service": "Home Cleaner",
+      "location": "G-13",
+      "rating": 4.7,
+      "distance_km": 1.3,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0341-4567833",
+      "response_time_minutes": 45,
+      "completed_jobs": 298
+    },
+    {
+      "id": 91,
+      "name": "Sparkling Clean (Razia Khatoon)",
+      "service": "Home Cleaner",
+      "location": "F-8",
+      "rating": 4.9,
+      "distance_km": 5.5,
+      "available": true,
+      "experience_years": 8,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0353-5678934",
+      "response_time_minutes": 60,
+      "completed_jobs": 412
+    },
+    {
+      "id": 92,
+      "name": "HomeMaid Services (Farzana)",
+      "service": "Home Cleaner",
+      "location": "DHA",
+      "rating": 4.6,
+      "distance_km": 11.8,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu",
+        "English"
+      ],
+      "phone": "0309-6789035",
+      "response_time_minutes": 90,
+      "completed_jobs": 233
+    },
+    {
+      "id": 93,
+      "name": "Noor Cleaning (Noor Bibi)",
+      "service": "Home Cleaner",
+      "location": "G-10",
+      "rating": 4.2,
+      "distance_km": 3.8,
+      "available": false,
+      "experience_years": 3,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0320-7890136",
+      "response_time_minutes": 30,
+      "completed_jobs": 145
+    },
+    {
+      "id": 94,
+      "name": "QuickClean (Parveen Akhtar)",
+      "service": "Home Cleaner",
+      "location": "Bahria Town",
+      "rating": 4.5,
+      "distance_km": 9.4,
+      "available": true,
+      "experience_years": 4,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0330-8901237",
+      "response_time_minutes": 45,
+      "completed_jobs": 189
+    },
+    {
+      "id": 95,
+      "name": "Bright Homes (Salma Bibi)",
+      "service": "Home Cleaner",
+      "location": "H-13",
+      "rating": 3.8,
+      "distance_km": 5.0,
+      "available": true,
+      "experience_years": 2,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0342-9012338",
+      "response_time_minutes": 60,
+      "completed_jobs": 76
+    },
+    {
+      "id": 96,
+      "name": "NeatNest (Gulshan Bibi)",
+      "service": "Home Cleaner",
+      "location": "G-11",
+      "rating": 4.4,
+      "distance_km": 3.2,
+      "available": true,
+      "experience_years": 5,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0343-0099887",
+      "response_time_minutes": 40,
+      "completed_jobs": 221
+    },
+    {
+      "id": 97,
+      "name": "CleanSweep (Nasreen Kausar)",
+      "service": "Home Cleaner",
+      "location": "I-8",
+      "rating": 4.6,
+      "distance_km": 4.3,
+      "available": true,
+      "experience_years": 7,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0353-9988776",
+      "response_time_minutes": 50,
+      "completed_jobs": 312
+    },
+    {
+      "id": 98,
+      "name": "TidyUp (Amina Begum)",
+      "service": "Home Cleaner",
+      "location": "F-10",
+      "rating": 4.3,
+      "distance_km": 6.0,
+      "available": true,
+      "experience_years": 3,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0314-7766554",
+      "response_time_minutes": 55,
+      "completed_jobs": 134
+    },
+    {
+      "id": 99,
+      "name": "LuxeClean (Shagufta Parveen)",
+      "service": "Home Cleaner",
+      "location": "Saddar",
+      "rating": 4.5,
+      "distance_km": 8.2,
+      "available": true,
+      "experience_years": 6,
+      "languages": [
+        "Urdu"
+      ],
+      "phone": "0324-6655443",
+      "response_time_minutes": 45,
+      "completed_jobs": 267
+    },
+    {
+      "id": 100,
+      "name": "CleanPro (Rehana Begum)",
+      "service": "Home Cleaner",
+      "location": "G-13",
+      "rating": 4.8,
+      "distance_km": 0.7,
+      "available": true,
+      "experience_years": 9,
+      "languages": [
+        "Urdu",
+        "Punjabi"
+      ],
+      "phone": "0317-0099777",
+      "response_time_minutes": 30,
+      "completed_jobs": 389
+    }
+  ],
+  "summary": {
+    "total_providers": 100,
+    "by_service": {
+      "AC Technician": 12,
+      "Electrician": 12,
+      "Plumber": 12,
+      "Tutor": 12,
+      "Beautician": 9,
+      "Carpenter": 10,
+      "Painter": 11,
+      "Mobile Repair": 11,
+      "Home Cleaner": 11
+    },
+    "available": 80,
+    "unavailable": 20
+  }
+}
