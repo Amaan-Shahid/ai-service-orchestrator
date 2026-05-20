@@ -6,7 +6,6 @@
       "service": "AC Technician",
       "location": "G-13",
       "rating": 4.8,
-      "distance_km": 1.2,
       "available": true,
       "experience_years": 8,
       "languages": [
@@ -16,7 +15,10 @@
       ],
       "phone": "0300-1234567",
       "response_time_minutes": 25,
-      "completed_jobs": 312
+      "completed_jobs": 312,
+      "username": "provider1",
+      "password": "provider1",
+      "service_radius_km": 1.2
     },
     {
       "id": 2,
@@ -24,7 +26,6 @@
       "service": "AC Technician",
       "location": "G-11",
       "rating": 4.5,
-      "distance_km": 3.4,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -33,7 +34,10 @@
       ],
       "phone": "0311-2345678",
       "response_time_minutes": 40,
-      "completed_jobs": 189
+      "completed_jobs": 189,
+      "username": "provider2",
+      "password": "provider2",
+      "service_radius_km": 3.4
     },
     {
       "id": 3,
@@ -41,7 +45,6 @@
       "service": "AC Technician",
       "location": "G-10",
       "rating": 4.9,
-      "distance_km": 2.1,
       "available": true,
       "experience_years": 12,
       "languages": [
@@ -50,7 +53,10 @@
       ],
       "phone": "0321-3456789",
       "response_time_minutes": 20,
-      "completed_jobs": 541
+      "completed_jobs": 541,
+      "username": "provider3",
+      "password": "provider3",
+      "service_radius_km": 2.1
     },
     {
       "id": 4,
@@ -58,7 +64,6 @@
       "service": "AC Technician",
       "location": "F-8",
       "rating": 4.2,
-      "distance_km": 5.7,
       "available": false,
       "experience_years": 3,
       "languages": [
@@ -66,7 +71,10 @@
       ],
       "phone": "0333-4567890",
       "response_time_minutes": 60,
-      "completed_jobs": 87
+      "completed_jobs": 87,
+      "username": "provider4",
+      "password": "provider4",
+      "service_radius_km": 5.7
     },
     {
       "id": 5,
@@ -74,7 +82,6 @@
       "service": "AC Technician",
       "location": "Bahria Town",
       "rating": 4.7,
-      "distance_km": 8.3,
       "available": true,
       "experience_years": 15,
       "languages": [
@@ -83,7 +90,10 @@
       ],
       "phone": "0345-5678901",
       "response_time_minutes": 35,
-      "completed_jobs": 720
+      "completed_jobs": 720,
+      "username": "provider5",
+      "password": "provider5",
+      "service_radius_km": 8.3
     },
     {
       "id": 6,
@@ -91,7 +101,6 @@
       "service": "AC Technician",
       "location": "DHA",
       "rating": 4.6,
-      "distance_km": 10.1,
       "available": true,
       "experience_years": 10,
       "languages": [
@@ -101,7 +110,10 @@
       ],
       "phone": "0301-6789012",
       "response_time_minutes": 30,
-      "completed_jobs": 403
+      "completed_jobs": 403,
+      "username": "provider6",
+      "password": "provider6",
+      "service_radius_km": 10.1
     },
     {
       "id": 7,
@@ -109,7 +121,6 @@
       "service": "AC Technician",
       "location": "H-13",
       "rating": 4.4,
-      "distance_km": 4.2,
       "available": true,
       "experience_years": 7,
       "languages": [
@@ -118,7 +129,10 @@
       ],
       "phone": "0354-0123439",
       "response_time_minutes": 35,
-      "completed_jobs": 278
+      "completed_jobs": 278,
+      "username": "provider7",
+      "password": "provider7",
+      "service_radius_km": 4.2
     },
     {
       "id": 8,
@@ -126,7 +140,6 @@
       "service": "AC Technician",
       "location": "I-8",
       "rating": 4.3,
-      "distance_km": 5.0,
       "available": true,
       "experience_years": 4,
       "languages": [
@@ -134,7 +147,10 @@
       ],
       "phone": "0312-9988771",
       "response_time_minutes": 50,
-      "completed_jobs": 134
+      "completed_jobs": 134,
+      "username": "provider8",
+      "password": "provider8",
+      "service_radius_km": 5
     },
     {
       "id": 9,
@@ -142,7 +158,6 @@
       "service": "AC Technician",
       "location": "F-10",
       "rating": 4.6,
-      "distance_km": 6.5,
       "available": false,
       "experience_years": 9,
       "languages": [
@@ -151,7 +166,10 @@
       ],
       "phone": "0322-8877665",
       "response_time_minutes": 40,
-      "completed_jobs": 367
+      "completed_jobs": 367,
+      "username": "provider9",
+      "password": "provider9",
+      "service_radius_km": 6.5
     },
     {
       "id": 10,
@@ -159,7 +177,6 @@
       "service": "AC Technician",
       "location": "Satellite Town",
       "rating": 3.9,
-      "distance_km": 7.8,
       "available": true,
       "experience_years": 2,
       "languages": [
@@ -168,7 +185,10 @@
       ],
       "phone": "0334-7766554",
       "response_time_minutes": 70,
-      "completed_jobs": 58
+      "completed_jobs": 58,
+      "username": "provider10",
+      "password": "provider10",
+      "service_radius_km": 7.8
     },
     {
       "id": 11,
@@ -176,7 +196,6 @@
       "service": "AC Technician",
       "location": "G-11",
       "rating": 4.5,
-      "distance_km": 2.7,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -185,15 +204,17 @@
       ],
       "phone": "0315-5544332",
       "response_time_minutes": 30,
-      "completed_jobs": 231
+      "completed_jobs": 231,
+      "username": "provider11",
+      "password": "provider11",
+      "service_radius_km": 2.7
     },
     {
       "id": 12,
       "name": "SnowFlake HVAC (Bilal Chaudhry)",
       "service": "AC Technician",
       "location": "Saddar",
-      "rating": 4.0,
-      "distance_km": 8.8,
+      "rating": 4,
       "available": true,
       "experience_years": 3,
       "languages": [
@@ -202,7 +223,10 @@
       ],
       "phone": "0325-4433221",
       "response_time_minutes": 60,
-      "completed_jobs": 98
+      "completed_jobs": 98,
+      "username": "provider12",
+      "password": "provider12",
+      "service_radius_km": 8.8
     },
     {
       "id": 13,
@@ -210,7 +234,6 @@
       "service": "Electrician",
       "location": "G-13",
       "rating": 4.7,
-      "distance_km": 0.8,
       "available": true,
       "experience_years": 9,
       "languages": [
@@ -219,7 +242,10 @@
       ],
       "phone": "0312-7890123",
       "response_time_minutes": 20,
-      "completed_jobs": 298
+      "completed_jobs": 298,
+      "username": "provider13",
+      "password": "provider13",
+      "service_radius_km": 0.8
     },
     {
       "id": 14,
@@ -227,7 +253,6 @@
       "service": "Electrician",
       "location": "G-11",
       "rating": 4.9,
-      "distance_km": 2.9,
       "available": true,
       "experience_years": 14,
       "languages": [
@@ -236,7 +261,10 @@
       ],
       "phone": "0322-8901234",
       "response_time_minutes": 15,
-      "completed_jobs": 612
+      "completed_jobs": 612,
+      "username": "provider14",
+      "password": "provider14",
+      "service_radius_km": 2.9
     },
     {
       "id": 15,
@@ -244,7 +272,6 @@
       "service": "Electrician",
       "location": "F-10",
       "rating": 3.9,
-      "distance_km": 6.2,
       "available": true,
       "experience_years": 2,
       "languages": [
@@ -252,7 +279,10 @@
       ],
       "phone": "0334-9012345",
       "response_time_minutes": 75,
-      "completed_jobs": 45
+      "completed_jobs": 45,
+      "username": "provider15",
+      "password": "provider15",
+      "service_radius_km": 6.2
     },
     {
       "id": 16,
@@ -260,7 +290,6 @@
       "service": "Electrician",
       "location": "I-8",
       "rating": 4.5,
-      "distance_km": 4.4,
       "available": false,
       "experience_years": 7,
       "languages": [
@@ -269,7 +298,10 @@
       ],
       "phone": "0346-0123456",
       "response_time_minutes": 30,
-      "completed_jobs": 234
+      "completed_jobs": 234,
+      "username": "provider16",
+      "password": "provider16",
+      "service_radius_km": 4.4
     },
     {
       "id": 17,
@@ -277,7 +309,6 @@
       "service": "Electrician",
       "location": "DHA",
       "rating": 4.8,
-      "distance_km": 11.5,
       "available": true,
       "experience_years": 18,
       "languages": [
@@ -286,7 +317,10 @@
       ],
       "phone": "0302-1234560",
       "response_time_minutes": 25,
-      "completed_jobs": 890
+      "completed_jobs": 890,
+      "username": "provider17",
+      "password": "provider17",
+      "service_radius_km": 11.5
     },
     {
       "id": 18,
@@ -294,7 +328,6 @@
       "service": "Electrician",
       "location": "Saddar",
       "rating": 4.3,
-      "distance_km": 7.8,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -303,7 +336,10 @@
       ],
       "phone": "0313-2345601",
       "response_time_minutes": 50,
-      "completed_jobs": 178
+      "completed_jobs": 178,
+      "username": "provider18",
+      "password": "provider18",
+      "service_radius_km": 7.8
     },
     {
       "id": 19,
@@ -311,7 +347,6 @@
       "service": "Electrician",
       "location": "H-13",
       "rating": 4.6,
-      "distance_km": 4.6,
       "available": true,
       "experience_years": 8,
       "languages": [
@@ -320,7 +355,10 @@
       ],
       "phone": "0310-1234540",
       "response_time_minutes": 30,
-      "completed_jobs": 312
+      "completed_jobs": 312,
+      "username": "provider19",
+      "password": "provider19",
+      "service_radius_km": 4.6
     },
     {
       "id": 20,
@@ -328,7 +366,6 @@
       "service": "Electrician",
       "location": "Satellite Town",
       "rating": 4.3,
-      "distance_km": 7.2,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -337,7 +374,10 @@
       ],
       "phone": "0343-3456742",
       "response_time_minutes": 55,
-      "completed_jobs": 167
+      "completed_jobs": 167,
+      "username": "provider20",
+      "password": "provider20",
+      "service_radius_km": 7.2
     },
     {
       "id": 21,
@@ -345,7 +385,6 @@
       "service": "Electrician",
       "location": "Bahria Town",
       "rating": 4.7,
-      "distance_km": 9.3,
       "available": true,
       "experience_years": 13,
       "languages": [
@@ -354,7 +393,10 @@
       ],
       "phone": "0323-5544332",
       "response_time_minutes": 40,
-      "completed_jobs": 478
+      "completed_jobs": 478,
+      "username": "provider21",
+      "password": "provider21",
+      "service_radius_km": 9.3
     },
     {
       "id": 22,
@@ -362,7 +404,6 @@
       "service": "Electrician",
       "location": "F-8",
       "rating": 4.4,
-      "distance_km": 5.8,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -371,7 +412,10 @@
       ],
       "phone": "0344-4433221",
       "response_time_minutes": 35,
-      "completed_jobs": 219
+      "completed_jobs": 219,
+      "username": "provider22",
+      "password": "provider22",
+      "service_radius_km": 5.8
     },
     {
       "id": 23,
@@ -379,7 +423,6 @@
       "service": "Electrician",
       "location": "G-13",
       "rating": 4.5,
-      "distance_km": 1.0,
       "available": true,
       "experience_years": 7,
       "languages": [
@@ -388,7 +431,10 @@
       ],
       "phone": "0336-3322110",
       "response_time_minutes": 25,
-      "completed_jobs": 289
+      "completed_jobs": 289,
+      "username": "provider23",
+      "password": "provider23",
+      "service_radius_km": 1
     },
     {
       "id": 24,
@@ -396,7 +442,6 @@
       "service": "Electrician",
       "location": "G-10",
       "rating": 4.6,
-      "distance_km": 2.4,
       "available": false,
       "experience_years": 8,
       "languages": [
@@ -404,7 +449,10 @@
       ],
       "phone": "0346-2211009",
       "response_time_minutes": 30,
-      "completed_jobs": 345
+      "completed_jobs": 345,
+      "username": "provider24",
+      "password": "provider24",
+      "service_radius_km": 2.4
     },
     {
       "id": 25,
@@ -412,7 +460,6 @@
       "service": "Plumber",
       "location": "G-13",
       "rating": 4.6,
-      "distance_km": 1.5,
       "available": true,
       "experience_years": 11,
       "languages": [
@@ -421,7 +468,10 @@
       ],
       "phone": "0323-3456702",
       "response_time_minutes": 30,
-      "completed_jobs": 445
+      "completed_jobs": 445,
+      "username": "provider25",
+      "password": "provider25",
+      "service_radius_km": 1.5
     },
     {
       "id": 26,
@@ -429,7 +479,6 @@
       "service": "Plumber",
       "location": "G-10",
       "rating": 4.4,
-      "distance_km": 3.0,
       "available": true,
       "experience_years": 4,
       "languages": [
@@ -437,7 +486,10 @@
       ],
       "phone": "0335-4567803",
       "response_time_minutes": 45,
-      "completed_jobs": 132
+      "completed_jobs": 132,
+      "username": "provider26",
+      "password": "provider26",
+      "service_radius_km": 3
     },
     {
       "id": 27,
@@ -445,7 +497,6 @@
       "service": "Plumber",
       "location": "F-8",
       "rating": 4.9,
-      "distance_km": 5.1,
       "available": true,
       "experience_years": 20,
       "languages": [
@@ -455,7 +506,10 @@
       ],
       "phone": "0347-5678904",
       "response_time_minutes": 20,
-      "completed_jobs": 1023
+      "completed_jobs": 1023,
+      "username": "provider27",
+      "password": "provider27",
+      "service_radius_km": 5.1
     },
     {
       "id": 28,
@@ -463,7 +517,6 @@
       "service": "Plumber",
       "location": "H-13",
       "rating": 3.7,
-      "distance_km": 4.8,
       "available": false,
       "experience_years": 2,
       "languages": [
@@ -471,7 +524,10 @@
       ],
       "phone": "0303-6789005",
       "response_time_minutes": 90,
-      "completed_jobs": 38
+      "completed_jobs": 38,
+      "username": "provider28",
+      "password": "provider28",
+      "service_radius_km": 4.8
     },
     {
       "id": 29,
@@ -479,7 +535,6 @@
       "service": "Plumber",
       "location": "Bahria Town",
       "rating": 4.7,
-      "distance_km": 9.2,
       "available": true,
       "experience_years": 13,
       "languages": [
@@ -488,7 +543,10 @@
       ],
       "phone": "0314-7890106",
       "response_time_minutes": 35,
-      "completed_jobs": 567
+      "completed_jobs": 567,
+      "username": "provider29",
+      "password": "provider29",
+      "service_radius_km": 9.2
     },
     {
       "id": 30,
@@ -496,7 +554,6 @@
       "service": "Plumber",
       "location": "Satellite Town",
       "rating": 4.1,
-      "distance_km": 6.6,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -505,7 +562,10 @@
       ],
       "phone": "0324-8901207",
       "response_time_minutes": 55,
-      "completed_jobs": 156
+      "completed_jobs": 156,
+      "username": "provider30",
+      "password": "provider30",
+      "service_radius_km": 6.6
     },
     {
       "id": 31,
@@ -513,7 +573,6 @@
       "service": "Plumber",
       "location": "I-8",
       "rating": 4.5,
-      "distance_km": 5.3,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -521,7 +580,10 @@
       ],
       "phone": "0331-2345641",
       "response_time_minutes": 40,
-      "completed_jobs": 221
+      "completed_jobs": 221,
+      "username": "provider31",
+      "password": "provider31",
+      "service_radius_km": 5.3
     },
     {
       "id": 32,
@@ -529,7 +591,6 @@
       "service": "Plumber",
       "location": "DHA",
       "rating": 4.8,
-      "distance_km": 12.4,
       "available": true,
       "experience_years": 16,
       "languages": [
@@ -538,7 +599,10 @@
       ],
       "phone": "0332-6655443",
       "response_time_minutes": 45,
-      "completed_jobs": 634
+      "completed_jobs": 634,
+      "username": "provider32",
+      "password": "provider32",
+      "service_radius_km": 12.4
     },
     {
       "id": 33,
@@ -546,7 +610,6 @@
       "service": "Plumber",
       "location": "G-11",
       "rating": 4.3,
-      "distance_km": 3.6,
       "available": true,
       "experience_years": 7,
       "languages": [
@@ -555,7 +618,10 @@
       ],
       "phone": "0341-5544332",
       "response_time_minutes": 35,
-      "completed_jobs": 287
+      "completed_jobs": 287,
+      "username": "provider33",
+      "password": "provider33",
+      "service_radius_km": 3.6
     },
     {
       "id": 34,
@@ -563,7 +629,6 @@
       "service": "Plumber",
       "location": "F-10",
       "rating": 3.8,
-      "distance_km": 7.1,
       "available": false,
       "experience_years": 3,
       "languages": [
@@ -571,7 +636,10 @@
       ],
       "phone": "0352-4433221",
       "response_time_minutes": 80,
-      "completed_jobs": 72
+      "completed_jobs": 72,
+      "username": "provider34",
+      "password": "provider34",
+      "service_radius_km": 7.1
     },
     {
       "id": 35,
@@ -579,7 +647,6 @@
       "service": "Plumber",
       "location": "G-13",
       "rating": 4.4,
-      "distance_km": 1.9,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -588,7 +655,10 @@
       ],
       "phone": "0327-9988776",
       "response_time_minutes": 35,
-      "completed_jobs": 198
+      "completed_jobs": 198,
+      "username": "provider35",
+      "password": "provider35",
+      "service_radius_km": 1.9
     },
     {
       "id": 36,
@@ -596,7 +666,6 @@
       "service": "Plumber",
       "location": "DHA",
       "rating": 4.6,
-      "distance_km": 13.7,
       "available": true,
       "experience_years": 11,
       "languages": [
@@ -605,7 +674,10 @@
       ],
       "phone": "0337-8877665",
       "response_time_minutes": 50,
-      "completed_jobs": 423
+      "completed_jobs": 423,
+      "username": "provider36",
+      "password": "provider36",
+      "service_radius_km": 13.7
     },
     {
       "id": 37,
@@ -613,7 +685,6 @@
       "service": "Tutor",
       "location": "G-13",
       "rating": 4.9,
-      "distance_km": 0.5,
       "available": true,
       "experience_years": 7,
       "languages": [
@@ -622,15 +693,17 @@
       ],
       "phone": "0336-9012308",
       "response_time_minutes": 60,
-      "completed_jobs": 210
+      "completed_jobs": 210,
+      "username": "provider37",
+      "password": "provider37",
+      "service_radius_km": 0.5
     },
     {
       "id": 38,
       "name": "Zara Noor (O/A Levels)",
       "service": "Tutor",
       "location": "F-8",
-      "rating": 5.0,
-      "distance_km": 5.9,
+      "rating": 5,
       "available": true,
       "experience_years": 9,
       "languages": [
@@ -639,7 +712,10 @@
       ],
       "phone": "0348-0123409",
       "response_time_minutes": 120,
-      "completed_jobs": 340
+      "completed_jobs": 340,
+      "username": "provider38",
+      "password": "provider38",
+      "service_radius_km": 5.9
     },
     {
       "id": 39,
@@ -647,7 +723,6 @@
       "service": "Tutor",
       "location": "G-11",
       "rating": 4.6,
-      "distance_km": 3.1,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -656,7 +731,10 @@
       ],
       "phone": "0304-1234510",
       "response_time_minutes": 90,
-      "completed_jobs": 145
+      "completed_jobs": 145,
+      "username": "provider39",
+      "password": "provider39",
+      "service_radius_km": 3.1
     },
     {
       "id": 40,
@@ -664,7 +742,6 @@
       "service": "Tutor",
       "location": "DHA",
       "rating": 4.8,
-      "distance_km": 12.3,
       "available": false,
       "experience_years": 11,
       "languages": [
@@ -673,15 +750,17 @@
       ],
       "phone": "0315-2345611",
       "response_time_minutes": 180,
-      "completed_jobs": 289
+      "completed_jobs": 289,
+      "username": "provider40",
+      "password": "provider40",
+      "service_radius_km": 12.3
     },
     {
       "id": 41,
       "name": "Imran Bhai Tutor",
       "service": "Tutor",
       "location": "Satellite Town",
-      "rating": 4.0,
-      "distance_km": 7.4,
+      "rating": 4,
       "available": true,
       "experience_years": 3,
       "languages": [
@@ -689,7 +768,10 @@
       ],
       "phone": "0325-3456712",
       "response_time_minutes": 60,
-      "completed_jobs": 78
+      "completed_jobs": 78,
+      "username": "provider41",
+      "password": "provider41",
+      "service_radius_km": 7.4
     },
     {
       "id": 42,
@@ -697,7 +779,6 @@
       "service": "Tutor",
       "location": "Bahria Town",
       "rating": 4.7,
-      "distance_km": 9.8,
       "available": true,
       "experience_years": 8,
       "languages": [
@@ -706,7 +787,10 @@
       ],
       "phone": "0316-7788990",
       "response_time_minutes": 120,
-      "completed_jobs": 198
+      "completed_jobs": 198,
+      "username": "provider42",
+      "password": "provider42",
+      "service_radius_km": 9.8
     },
     {
       "id": 43,
@@ -714,7 +798,6 @@
       "service": "Tutor",
       "location": "G-10",
       "rating": 4.5,
-      "distance_km": 2.8,
       "available": true,
       "experience_years": 4,
       "languages": [
@@ -723,7 +806,10 @@
       ],
       "phone": "0326-6677889",
       "response_time_minutes": 60,
-      "completed_jobs": 122
+      "completed_jobs": 122,
+      "username": "provider43",
+      "password": "provider43",
+      "service_radius_km": 2.8
     },
     {
       "id": 44,
@@ -731,7 +817,6 @@
       "service": "Tutor",
       "location": "I-8",
       "rating": 4.6,
-      "distance_km": 4.7,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -740,7 +825,10 @@
       ],
       "phone": "0337-5566778",
       "response_time_minutes": 90,
-      "completed_jobs": 163
+      "completed_jobs": 163,
+      "username": "provider44",
+      "password": "provider44",
+      "service_radius_km": 4.7
     },
     {
       "id": 45,
@@ -748,7 +836,6 @@
       "service": "Tutor",
       "location": "F-10",
       "rating": 4.9,
-      "distance_km": 6.3,
       "available": false,
       "experience_years": 14,
       "languages": [
@@ -757,7 +844,10 @@
       ],
       "phone": "0347-4455667",
       "response_time_minutes": 180,
-      "completed_jobs": 421
+      "completed_jobs": 421,
+      "username": "provider45",
+      "password": "provider45",
+      "service_radius_km": 6.3
     },
     {
       "id": 46,
@@ -765,7 +855,6 @@
       "service": "Tutor",
       "location": "H-13",
       "rating": 4.7,
-      "distance_km": 4.1,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -774,7 +863,10 @@
       ],
       "phone": "0307-1100998",
       "response_time_minutes": 90,
-      "completed_jobs": 176
+      "completed_jobs": 176,
+      "username": "provider46",
+      "password": "provider46",
+      "service_radius_km": 4.1
     },
     {
       "id": 47,
@@ -782,7 +874,6 @@
       "service": "Tutor",
       "location": "Saddar",
       "rating": 4.3,
-      "distance_km": 8.0,
       "available": true,
       "experience_years": 3,
       "languages": [
@@ -790,7 +881,10 @@
       ],
       "phone": "0317-0099887",
       "response_time_minutes": 120,
-      "completed_jobs": 89
+      "completed_jobs": 89,
+      "username": "provider47",
+      "password": "provider47",
+      "service_radius_km": 8
     },
     {
       "id": 48,
@@ -798,7 +892,6 @@
       "service": "Tutor",
       "location": "F-8",
       "rating": 4.4,
-      "distance_km": 6.0,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -807,7 +900,10 @@
       ],
       "phone": "0327-8899001",
       "response_time_minutes": 60,
-      "completed_jobs": 134
+      "completed_jobs": 134,
+      "username": "provider48",
+      "password": "provider48",
+      "service_radius_km": 6
     },
     {
       "id": 49,
@@ -815,7 +911,6 @@
       "service": "Beautician",
       "location": "G-13",
       "rating": 4.7,
-      "distance_km": 1.1,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -824,7 +919,10 @@
       ],
       "phone": "0337-4567813",
       "response_time_minutes": 45,
-      "completed_jobs": 402
+      "completed_jobs": 402,
+      "username": "provider49",
+      "password": "provider49",
+      "service_radius_km": 1.1
     },
     {
       "id": 50,
@@ -832,7 +930,6 @@
       "service": "Beautician",
       "location": "F-10",
       "rating": 4.9,
-      "distance_km": 6.8,
       "available": true,
       "experience_years": 12,
       "languages": [
@@ -841,7 +938,10 @@
       ],
       "phone": "0349-5678914",
       "response_time_minutes": 60,
-      "completed_jobs": 678
+      "completed_jobs": 678,
+      "username": "provider50",
+      "password": "provider50",
+      "service_radius_km": 6.8
     },
     {
       "id": 51,
@@ -849,7 +949,6 @@
       "service": "Beautician",
       "location": "Bahria Town",
       "rating": 4.5,
-      "distance_km": 9.7,
       "available": false,
       "experience_years": 4,
       "languages": [
@@ -857,7 +956,10 @@
       ],
       "phone": "0305-6789015",
       "response_time_minutes": 30,
-      "completed_jobs": 189
+      "completed_jobs": 189,
+      "username": "provider51",
+      "password": "provider51",
+      "service_radius_km": 9.7
     },
     {
       "id": 52,
@@ -865,7 +967,6 @@
       "service": "Beautician",
       "location": "I-8",
       "rating": 4.3,
-      "distance_km": 5.2,
       "available": true,
       "experience_years": 3,
       "languages": [
@@ -874,7 +975,10 @@
       ],
       "phone": "0316-7890116",
       "response_time_minutes": 40,
-      "completed_jobs": 112
+      "completed_jobs": 112,
+      "username": "provider52",
+      "password": "provider52",
+      "service_radius_km": 5.2
     },
     {
       "id": 53,
@@ -882,7 +986,6 @@
       "service": "Beautician",
       "location": "DHA",
       "rating": 4.8,
-      "distance_km": 13.0,
       "available": true,
       "experience_years": 8,
       "languages": [
@@ -891,7 +994,10 @@
       ],
       "phone": "0326-8901217",
       "response_time_minutes": 90,
-      "completed_jobs": 523
+      "completed_jobs": 523,
+      "username": "provider53",
+      "password": "provider53",
+      "service_radius_km": 13
     },
     {
       "id": 54,
@@ -899,7 +1005,6 @@
       "service": "Beautician",
       "location": "G-11",
       "rating": 4.4,
-      "distance_km": 3.3,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -907,7 +1012,10 @@
       ],
       "phone": "0327-3344556",
       "response_time_minutes": 50,
-      "completed_jobs": 234
+      "completed_jobs": 234,
+      "username": "provider54",
+      "password": "provider54",
+      "service_radius_km": 3.3
     },
     {
       "id": 55,
@@ -915,7 +1023,6 @@
       "service": "Beautician",
       "location": "Saddar",
       "rating": 4.2,
-      "distance_km": 8.6,
       "available": true,
       "experience_years": 4,
       "languages": [
@@ -924,7 +1031,10 @@
       ],
       "phone": "0338-2233445",
       "response_time_minutes": 30,
-      "completed_jobs": 156
+      "completed_jobs": 156,
+      "username": "provider55",
+      "password": "provider55",
+      "service_radius_km": 8.6
     },
     {
       "id": 56,
@@ -932,7 +1042,6 @@
       "service": "Beautician",
       "location": "F-8",
       "rating": 4.9,
-      "distance_km": 6.1,
       "available": true,
       "experience_years": 10,
       "languages": [
@@ -941,7 +1050,10 @@
       ],
       "phone": "0348-1122334",
       "response_time_minutes": 60,
-      "completed_jobs": 589
+      "completed_jobs": 589,
+      "username": "provider56",
+      "password": "provider56",
+      "service_radius_km": 6.1
     },
     {
       "id": 57,
@@ -949,7 +1061,6 @@
       "service": "Beautician",
       "location": "G-10",
       "rating": 4.5,
-      "distance_km": 2.5,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -958,7 +1069,10 @@
       ],
       "phone": "0358-0011223",
       "response_time_minutes": 40,
-      "completed_jobs": 198
+      "completed_jobs": 198,
+      "username": "provider57",
+      "password": "provider57",
+      "service_radius_km": 2.5
     },
     {
       "id": 58,
@@ -966,7 +1080,6 @@
       "service": "Carpenter",
       "location": "G-13",
       "rating": 4.6,
-      "distance_km": 2.0,
       "available": true,
       "experience_years": 16,
       "languages": [
@@ -975,7 +1088,10 @@
       ],
       "phone": "0338-9012318",
       "response_time_minutes": 60,
-      "completed_jobs": 378
+      "completed_jobs": 378,
+      "username": "provider58",
+      "password": "provider58",
+      "service_radius_km": 2
     },
     {
       "id": 59,
@@ -983,7 +1099,6 @@
       "service": "Carpenter",
       "location": "G-10",
       "rating": 4.8,
-      "distance_km": 3.3,
       "available": true,
       "experience_years": 22,
       "languages": [
@@ -991,7 +1106,10 @@
       ],
       "phone": "0350-0123419",
       "response_time_minutes": 45,
-      "completed_jobs": 891
+      "completed_jobs": 891,
+      "username": "provider59",
+      "password": "provider59",
+      "service_radius_km": 3.3
     },
     {
       "id": 60,
@@ -999,7 +1117,6 @@
       "service": "Carpenter",
       "location": "F-8",
       "rating": 4.4,
-      "distance_km": 6.0,
       "available": false,
       "experience_years": 7,
       "languages": [
@@ -1008,7 +1125,10 @@
       ],
       "phone": "0306-1234520",
       "response_time_minutes": 120,
-      "completed_jobs": 203
+      "completed_jobs": 203,
+      "username": "provider60",
+      "password": "provider60",
+      "service_radius_km": 6
     },
     {
       "id": 61,
@@ -1016,7 +1136,6 @@
       "service": "Carpenter",
       "location": "Bahria Town",
       "rating": 4.9,
-      "distance_km": 10.5,
       "available": true,
       "experience_years": 18,
       "languages": [
@@ -1025,7 +1144,10 @@
       ],
       "phone": "0317-2345621",
       "response_time_minutes": 90,
-      "completed_jobs": 652
+      "completed_jobs": 652,
+      "username": "provider61",
+      "password": "provider61",
+      "service_radius_km": 10.5
     },
     {
       "id": 62,
@@ -1033,7 +1155,6 @@
       "service": "Carpenter",
       "location": "Saddar",
       "rating": 3.8,
-      "distance_km": 8.1,
       "available": true,
       "experience_years": 4,
       "languages": [
@@ -1042,7 +1163,10 @@
       ],
       "phone": "0327-3456722",
       "response_time_minutes": 90,
-      "completed_jobs": 67
+      "completed_jobs": 67,
+      "username": "provider62",
+      "password": "provider62",
+      "service_radius_km": 8.1
     },
     {
       "id": 63,
@@ -1050,7 +1174,6 @@
       "service": "Carpenter",
       "location": "I-8",
       "rating": 4.5,
-      "distance_km": 5.6,
       "available": false,
       "experience_years": 9,
       "languages": [
@@ -1058,7 +1181,10 @@
       ],
       "phone": "0311-5678944",
       "response_time_minutes": 75,
-      "completed_jobs": 243
+      "completed_jobs": 243,
+      "username": "provider63",
+      "password": "provider63",
+      "service_radius_km": 5.6
     },
     {
       "id": 64,
@@ -1066,7 +1192,6 @@
       "service": "Carpenter",
       "location": "DHA",
       "rating": 4.7,
-      "distance_km": 13.5,
       "available": true,
       "experience_years": 20,
       "languages": [
@@ -1075,7 +1200,10 @@
       ],
       "phone": "0328-9988776",
       "response_time_minutes": 60,
-      "completed_jobs": 712
+      "completed_jobs": 712,
+      "username": "provider64",
+      "password": "provider64",
+      "service_radius_km": 13.5
     },
     {
       "id": 65,
@@ -1083,7 +1211,6 @@
       "service": "Carpenter",
       "location": "H-13",
       "rating": 4.2,
-      "distance_km": 5.0,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -1092,7 +1219,10 @@
       ],
       "phone": "0339-8877665",
       "response_time_minutes": 80,
-      "completed_jobs": 143
+      "completed_jobs": 143,
+      "username": "provider65",
+      "password": "provider65",
+      "service_radius_km": 5
     },
     {
       "id": 66,
@@ -1100,7 +1230,6 @@
       "service": "Carpenter",
       "location": "G-11",
       "rating": 4.3,
-      "distance_km": 3.9,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -1109,7 +1238,10 @@
       ],
       "phone": "0347-7766554",
       "response_time_minutes": 90,
-      "completed_jobs": 134
+      "completed_jobs": 134,
+      "username": "provider66",
+      "password": "provider66",
+      "service_radius_km": 3.9
     },
     {
       "id": 67,
@@ -1117,7 +1249,6 @@
       "service": "Carpenter",
       "location": "F-10",
       "rating": 4.6,
-      "distance_km": 6.7,
       "available": false,
       "experience_years": 10,
       "languages": [
@@ -1125,7 +1256,10 @@
       ],
       "phone": "0357-6655443",
       "response_time_minutes": 70,
-      "completed_jobs": 302
+      "completed_jobs": 302,
+      "username": "provider67",
+      "password": "provider67",
+      "service_radius_km": 6.7
     },
     {
       "id": 68,
@@ -1133,7 +1267,6 @@
       "service": "Painter",
       "location": "G-13",
       "rating": 4.7,
-      "distance_km": 1.8,
       "available": true,
       "experience_years": 10,
       "languages": [
@@ -1142,7 +1275,10 @@
       ],
       "phone": "0339-4567823",
       "response_time_minutes": 30,
-      "completed_jobs": 267
+      "completed_jobs": 267,
+      "username": "provider68",
+      "password": "provider68",
+      "service_radius_km": 1.8
     },
     {
       "id": 69,
@@ -1150,7 +1286,6 @@
       "service": "Painter",
       "location": "G-11",
       "rating": 4.5,
-      "distance_km": 3.7,
       "available": true,
       "experience_years": 8,
       "languages": [
@@ -1159,7 +1294,10 @@
       ],
       "phone": "0351-5678924",
       "response_time_minutes": 60,
-      "completed_jobs": 334
+      "completed_jobs": 334,
+      "username": "provider69",
+      "password": "provider69",
+      "service_radius_km": 3.7
     },
     {
       "id": 70,
@@ -1167,7 +1305,6 @@
       "service": "Painter",
       "location": "DHA",
       "rating": 4.9,
-      "distance_km": 12.6,
       "available": true,
       "experience_years": 15,
       "languages": [
@@ -1176,7 +1313,10 @@
       ],
       "phone": "0307-6789025",
       "response_time_minutes": 45,
-      "completed_jobs": 489
+      "completed_jobs": 489,
+      "username": "provider70",
+      "password": "provider70",
+      "service_radius_km": 12.6
     },
     {
       "id": 71,
@@ -1184,7 +1324,6 @@
       "service": "Painter",
       "location": "Satellite Town",
       "rating": 3.9,
-      "distance_km": 7.0,
       "available": false,
       "experience_years": 3,
       "languages": [
@@ -1192,7 +1331,10 @@
       ],
       "phone": "0318-7890126",
       "response_time_minutes": 120,
-      "completed_jobs": 55
+      "completed_jobs": 55,
+      "username": "provider71",
+      "password": "provider71",
+      "service_radius_km": 7
     },
     {
       "id": 72,
@@ -1200,7 +1342,6 @@
       "service": "Painter",
       "location": "F-10",
       "rating": 4.6,
-      "distance_km": 6.4,
       "available": true,
       "experience_years": 12,
       "languages": [
@@ -1209,7 +1350,10 @@
       ],
       "phone": "0328-8901227",
       "response_time_minutes": 60,
-      "completed_jobs": 301
+      "completed_jobs": 301,
+      "username": "provider72",
+      "password": "provider72",
+      "service_radius_km": 6.4
     },
     {
       "id": 73,
@@ -1217,7 +1361,6 @@
       "service": "Painter",
       "location": "Bahria Town",
       "rating": 4.7,
-      "distance_km": 10.8,
       "available": true,
       "experience_years": 14,
       "languages": [
@@ -1226,7 +1369,10 @@
       ],
       "phone": "0355-4567843",
       "response_time_minutes": 60,
-      "completed_jobs": 398
+      "completed_jobs": 398,
+      "username": "provider73",
+      "password": "provider73",
+      "service_radius_km": 10.8
     },
     {
       "id": 74,
@@ -1234,7 +1380,6 @@
       "service": "Painter",
       "location": "I-8",
       "rating": 4.3,
-      "distance_km": 5.4,
       "available": true,
       "experience_years": 7,
       "languages": [
@@ -1242,7 +1387,10 @@
       ],
       "phone": "0329-7766554",
       "response_time_minutes": 50,
-      "completed_jobs": 198
+      "completed_jobs": 198,
+      "username": "provider74",
+      "password": "provider74",
+      "service_radius_km": 5.4
     },
     {
       "id": 75,
@@ -1250,7 +1398,6 @@
       "service": "Painter",
       "location": "F-8",
       "rating": 4.5,
-      "distance_km": 6.9,
       "available": true,
       "experience_years": 9,
       "languages": [
@@ -1259,7 +1406,10 @@
       ],
       "phone": "0340-6655443",
       "response_time_minutes": 45,
-      "completed_jobs": 276
+      "completed_jobs": 276,
+      "username": "provider75",
+      "password": "provider75",
+      "service_radius_km": 6.9
     },
     {
       "id": 76,
@@ -1267,7 +1417,6 @@
       "service": "Painter",
       "location": "Saddar",
       "rating": 3.7,
-      "distance_km": 8.9,
       "available": false,
       "experience_years": 2,
       "languages": [
@@ -1276,7 +1425,10 @@
       ],
       "phone": "0350-5544332",
       "response_time_minutes": 100,
-      "completed_jobs": 43
+      "completed_jobs": 43,
+      "username": "provider76",
+      "password": "provider76",
+      "service_radius_km": 8.9
     },
     {
       "id": 77,
@@ -1284,7 +1436,6 @@
       "service": "Painter",
       "location": "G-13",
       "rating": 4.4,
-      "distance_km": 1.4,
       "available": true,
       "experience_years": 8,
       "languages": [
@@ -1293,7 +1444,10 @@
       ],
       "phone": "0300-4433221",
       "response_time_minutes": 40,
-      "completed_jobs": 234
+      "completed_jobs": 234,
+      "username": "provider77",
+      "password": "provider77",
+      "service_radius_km": 1.4
     },
     {
       "id": 78,
@@ -1301,7 +1455,6 @@
       "service": "Painter",
       "location": "H-13",
       "rating": 4.2,
-      "distance_km": 4.4,
       "available": true,
       "experience_years": 4,
       "languages": [
@@ -1309,7 +1462,10 @@
       ],
       "phone": "0310-3322110",
       "response_time_minutes": 60,
-      "completed_jobs": 156
+      "completed_jobs": 156,
+      "username": "provider78",
+      "password": "provider78",
+      "service_radius_km": 4.4
     },
     {
       "id": 79,
@@ -1317,7 +1473,6 @@
       "service": "Mobile Repair",
       "location": "G-13",
       "rating": 4.8,
-      "distance_km": 0.9,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -1326,7 +1481,10 @@
       ],
       "phone": "0340-9012328",
       "response_time_minutes": 15,
-      "completed_jobs": 823
+      "completed_jobs": 823,
+      "username": "provider79",
+      "password": "provider79",
+      "service_radius_km": 0.9
     },
     {
       "id": 80,
@@ -1334,7 +1492,6 @@
       "service": "Mobile Repair",
       "location": "G-11",
       "rating": 4.6,
-      "distance_km": 3.5,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -1344,7 +1501,10 @@
       ],
       "phone": "0352-0123429",
       "response_time_minutes": 20,
-      "completed_jobs": 567
+      "completed_jobs": 567,
+      "username": "provider80",
+      "password": "provider80",
+      "service_radius_km": 3.5
     },
     {
       "id": 81,
@@ -1352,7 +1512,6 @@
       "service": "Mobile Repair",
       "location": "Saddar",
       "rating": 4.4,
-      "distance_km": 8.4,
       "available": true,
       "experience_years": 9,
       "languages": [
@@ -1362,7 +1521,10 @@
       ],
       "phone": "0308-1234530",
       "response_time_minutes": 25,
-      "completed_jobs": 1102
+      "completed_jobs": 1102,
+      "username": "provider81",
+      "password": "provider81",
+      "service_radius_km": 8.4
     },
     {
       "id": 82,
@@ -1370,7 +1532,6 @@
       "service": "Mobile Repair",
       "location": "DHA",
       "rating": 4.9,
-      "distance_km": 14.2,
       "available": false,
       "experience_years": 11,
       "languages": [
@@ -1379,7 +1540,10 @@
       ],
       "phone": "0319-2345631",
       "response_time_minutes": 30,
-      "completed_jobs": 744
+      "completed_jobs": 744,
+      "username": "provider82",
+      "password": "provider82",
+      "service_radius_km": 14.2
     },
     {
       "id": 83,
@@ -1387,7 +1551,6 @@
       "service": "Mobile Repair",
       "location": "I-8",
       "rating": 4.3,
-      "distance_km": 4.9,
       "available": true,
       "experience_years": 4,
       "languages": [
@@ -1395,7 +1558,10 @@
       ],
       "phone": "0329-3456732",
       "response_time_minutes": 20,
-      "completed_jobs": 389
+      "completed_jobs": 389,
+      "username": "provider83",
+      "password": "provider83",
+      "service_radius_km": 4.9
     },
     {
       "id": 84,
@@ -1403,7 +1569,6 @@
       "service": "Mobile Repair",
       "location": "Bahria Town",
       "rating": 4.5,
-      "distance_km": 10.3,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -1412,7 +1577,10 @@
       ],
       "phone": "0330-4433221",
       "response_time_minutes": 30,
-      "completed_jobs": 312
+      "completed_jobs": 312,
+      "username": "provider84",
+      "password": "provider84",
+      "service_radius_km": 10.3
     },
     {
       "id": 85,
@@ -1420,7 +1588,6 @@
       "service": "Mobile Repair",
       "location": "F-8",
       "rating": 4.7,
-      "distance_km": 6.7,
       "available": true,
       "experience_years": 7,
       "languages": [
@@ -1429,7 +1596,10 @@
       ],
       "phone": "0341-3322110",
       "response_time_minutes": 25,
-      "completed_jobs": 478
+      "completed_jobs": 478,
+      "username": "provider85",
+      "password": "provider85",
+      "service_radius_km": 6.7
     },
     {
       "id": 86,
@@ -1437,7 +1607,6 @@
       "service": "Mobile Repair",
       "location": "G-10",
       "rating": 4.2,
-      "distance_km": 2.6,
       "available": true,
       "experience_years": 3,
       "languages": [
@@ -1446,7 +1615,10 @@
       ],
       "phone": "0351-2211009",
       "response_time_minutes": 20,
-      "completed_jobs": 267
+      "completed_jobs": 267,
+      "username": "provider86",
+      "password": "provider86",
+      "service_radius_km": 2.6
     },
     {
       "id": 87,
@@ -1454,7 +1626,6 @@
       "service": "Mobile Repair",
       "location": "H-13",
       "rating": 4.4,
-      "distance_km": 4.5,
       "available": false,
       "experience_years": 5,
       "languages": [
@@ -1462,7 +1633,10 @@
       ],
       "phone": "0342-1100998",
       "response_time_minutes": 35,
-      "completed_jobs": 198
+      "completed_jobs": 198,
+      "username": "provider87",
+      "password": "provider87",
+      "service_radius_km": 4.5
     },
     {
       "id": 88,
@@ -1470,7 +1644,6 @@
       "service": "Mobile Repair",
       "location": "Satellite Town",
       "rating": 4.3,
-      "distance_km": 7.5,
       "available": true,
       "experience_years": 3,
       "languages": [
@@ -1479,7 +1652,10 @@
       ],
       "phone": "0340-2211009",
       "response_time_minutes": 30,
-      "completed_jobs": 178
+      "completed_jobs": 178,
+      "username": "provider88",
+      "password": "provider88",
+      "service_radius_km": 7.5
     },
     {
       "id": 89,
@@ -1487,7 +1663,6 @@
       "service": "Mobile Repair",
       "location": "F-10",
       "rating": 4.5,
-      "distance_km": 6.1,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -1496,7 +1671,10 @@
       ],
       "phone": "0307-1100887",
       "response_time_minutes": 20,
-      "completed_jobs": 345
+      "completed_jobs": 345,
+      "username": "provider89",
+      "password": "provider89",
+      "service_radius_km": 6.1
     },
     {
       "id": 90,
@@ -1504,7 +1682,6 @@
       "service": "Home Cleaner",
       "location": "G-13",
       "rating": 4.7,
-      "distance_km": 1.3,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -1513,7 +1690,10 @@
       ],
       "phone": "0341-4567833",
       "response_time_minutes": 45,
-      "completed_jobs": 298
+      "completed_jobs": 298,
+      "username": "provider90",
+      "password": "provider90",
+      "service_radius_km": 1.3
     },
     {
       "id": 91,
@@ -1521,7 +1701,6 @@
       "service": "Home Cleaner",
       "location": "F-8",
       "rating": 4.9,
-      "distance_km": 5.5,
       "available": true,
       "experience_years": 8,
       "languages": [
@@ -1529,7 +1708,10 @@
       ],
       "phone": "0353-5678934",
       "response_time_minutes": 60,
-      "completed_jobs": 412
+      "completed_jobs": 412,
+      "username": "provider91",
+      "password": "provider91",
+      "service_radius_km": 5.5
     },
     {
       "id": 92,
@@ -1537,7 +1719,6 @@
       "service": "Home Cleaner",
       "location": "DHA",
       "rating": 4.6,
-      "distance_km": 11.8,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -1546,7 +1727,10 @@
       ],
       "phone": "0309-6789035",
       "response_time_minutes": 90,
-      "completed_jobs": 233
+      "completed_jobs": 233,
+      "username": "provider92",
+      "password": "provider92",
+      "service_radius_km": 11.8
     },
     {
       "id": 93,
@@ -1554,7 +1738,6 @@
       "service": "Home Cleaner",
       "location": "G-10",
       "rating": 4.2,
-      "distance_km": 3.8,
       "available": false,
       "experience_years": 3,
       "languages": [
@@ -1562,7 +1745,10 @@
       ],
       "phone": "0320-7890136",
       "response_time_minutes": 30,
-      "completed_jobs": 145
+      "completed_jobs": 145,
+      "username": "provider93",
+      "password": "provider93",
+      "service_radius_km": 3.8
     },
     {
       "id": 94,
@@ -1570,7 +1756,6 @@
       "service": "Home Cleaner",
       "location": "Bahria Town",
       "rating": 4.5,
-      "distance_km": 9.4,
       "available": true,
       "experience_years": 4,
       "languages": [
@@ -1579,7 +1764,10 @@
       ],
       "phone": "0330-8901237",
       "response_time_minutes": 45,
-      "completed_jobs": 189
+      "completed_jobs": 189,
+      "username": "provider94",
+      "password": "provider94",
+      "service_radius_km": 9.4
     },
     {
       "id": 95,
@@ -1587,7 +1775,6 @@
       "service": "Home Cleaner",
       "location": "H-13",
       "rating": 3.8,
-      "distance_km": 5.0,
       "available": true,
       "experience_years": 2,
       "languages": [
@@ -1595,7 +1782,10 @@
       ],
       "phone": "0342-9012338",
       "response_time_minutes": 60,
-      "completed_jobs": 76
+      "completed_jobs": 76,
+      "username": "provider95",
+      "password": "provider95",
+      "service_radius_km": 5
     },
     {
       "id": 96,
@@ -1603,7 +1793,6 @@
       "service": "Home Cleaner",
       "location": "G-11",
       "rating": 4.4,
-      "distance_km": 3.2,
       "available": true,
       "experience_years": 5,
       "languages": [
@@ -1612,7 +1801,10 @@
       ],
       "phone": "0343-0099887",
       "response_time_minutes": 40,
-      "completed_jobs": 221
+      "completed_jobs": 221,
+      "username": "provider96",
+      "password": "provider96",
+      "service_radius_km": 3.2
     },
     {
       "id": 97,
@@ -1620,7 +1812,6 @@
       "service": "Home Cleaner",
       "location": "I-8",
       "rating": 4.6,
-      "distance_km": 4.3,
       "available": true,
       "experience_years": 7,
       "languages": [
@@ -1628,7 +1819,10 @@
       ],
       "phone": "0353-9988776",
       "response_time_minutes": 50,
-      "completed_jobs": 312
+      "completed_jobs": 312,
+      "username": "provider97",
+      "password": "provider97",
+      "service_radius_km": 4.3
     },
     {
       "id": 98,
@@ -1636,7 +1830,6 @@
       "service": "Home Cleaner",
       "location": "F-10",
       "rating": 4.3,
-      "distance_km": 6.0,
       "available": true,
       "experience_years": 3,
       "languages": [
@@ -1645,7 +1838,10 @@
       ],
       "phone": "0314-7766554",
       "response_time_minutes": 55,
-      "completed_jobs": 134
+      "completed_jobs": 134,
+      "username": "provider98",
+      "password": "provider98",
+      "service_radius_km": 6
     },
     {
       "id": 99,
@@ -1653,7 +1849,6 @@
       "service": "Home Cleaner",
       "location": "Saddar",
       "rating": 4.5,
-      "distance_km": 8.2,
       "available": true,
       "experience_years": 6,
       "languages": [
@@ -1661,7 +1856,10 @@
       ],
       "phone": "0324-6655443",
       "response_time_minutes": 45,
-      "completed_jobs": 267
+      "completed_jobs": 267,
+      "username": "provider99",
+      "password": "provider99",
+      "service_radius_km": 8.2
     },
     {
       "id": 100,
@@ -1669,7 +1867,6 @@
       "service": "Home Cleaner",
       "location": "G-13",
       "rating": 4.8,
-      "distance_km": 0.7,
       "available": true,
       "experience_years": 9,
       "languages": [
@@ -1678,7 +1875,10 @@
       ],
       "phone": "0317-0099777",
       "response_time_minutes": 30,
-      "completed_jobs": 389
+      "completed_jobs": 389,
+      "username": "provider100",
+      "password": "provider100",
+      "service_radius_km": 0.7
     }
   ],
   "summary": {

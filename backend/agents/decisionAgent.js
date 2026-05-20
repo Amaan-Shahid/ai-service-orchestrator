@@ -11,7 +11,7 @@ function generateDecision(provider, intent) {
   const reasons = [];
   const reasoning = [
     `Rating: ${provider.rating}`,
-    `Distance: ${provider.distance_km} km`,
+    `Service radius: ${provider.service_radius_km} km`,
     `Response time: ${provider.response_time_minutes} mins`,
     `${provider.completed_jobs} completed jobs`,
   ];
@@ -22,9 +22,9 @@ function generateDecision(provider, intent) {
     );
   }
 
-  if (provider.distance_km <= 3) {
+  if ((provider.service_radius_km || 0) >= 5) {
     reasons.push(
-      "close proximity to your location"
+      "good coverage in your area"
     );
   }
 

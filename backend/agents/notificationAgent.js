@@ -4,46 +4,36 @@ function createScheduledNotifications(booking) {
   }
 
   const now = new Date();
+  const scheduledAt = new Date(booking.scheduledAt);
 
-  const reminder1Hour = new Date(now.getTime() + 60 * 60 * 1000);
+  if (Number.isNaN(scheduledAt.getTime())) {
+    return [];
+  }
 
-  const providerArrival = new Date(now.getTime() + 90 * 60 * 1000);
-
-  const completion = new Date(now.getTime() + 3 * 60 * 60 * 1000);
+  const reminder1Hour = new Date(scheduledAt.getTime() - 60 * 60 * 1000);
+  const providerArrival = scheduledAt;
+  const reminderScheduledFor = reminder1Hour > now ? reminder1Hour : now;
+  const reminderMessage =
+    reminder1Hour > now
+      ? `Reminder: ${booking.provider.name} is scheduled for your ${booking.service} service in one hour.`
+      : `Reminder: ${booking.provider.name} is scheduled soon for your ${booking.service} service.`;
 
   return [
     {
       type: "reminder",
-
-      scheduledFor: reminder1Hour,
-
+      scheduledFor: reminderScheduledFor,
       status: "scheduled",
-
-      message:
-        `Reminder: ${booking.provider.name} ` +
-        `is scheduled for your ${booking.service} service.`,
+      channel: "in_app",
+      message: reminderMessage,
     },
 
     {
       type: "provider_on_the_way",
-
       scheduledFor: providerArrival,
-
       status: "scheduled",
-
+      channel: "in_app",
       message:
-        `${booking.provider.name} is on the way.`,
-    },
-
-    {
-      type: "job_completed",
-
-      scheduledFor: completion,
-
-      status: "pending",
-
-      message:
-        `Your ${booking.service} service has been completed.`,
+        `${booking.provider.name} is scheduled to arrive for your ${booking.service} service.`,
     },
   ];
 }

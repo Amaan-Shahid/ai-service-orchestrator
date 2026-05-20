@@ -82,7 +82,7 @@ function calculateScore(provider) {
 
   score += provider.rating * 20;
 
-  score += Math.max(0, 30 - provider.distance_km * 2);
+  score += Math.min((provider.service_radius_km || 0) * 2, 20);
 
   score += Math.max(0, 20 - provider.response_time_minutes / 5);
 

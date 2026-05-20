@@ -1,0 +1,26 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "checkJs": false,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/assets/*": [
+        "./assets/*"
+      ]
+    }
+  },
+  "include": [
+    "index.js",
+    "App.js",
+    "app/**/*.tsx",
+    "screens/**/*.js",
+    "services/**/*.js"
+  ],
+  "exclude": [
+    "src"
+  ]
+}

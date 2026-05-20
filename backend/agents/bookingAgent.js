@@ -1,3 +1,5 @@
+const { resolveBookingTime } = require("../utils/bookingTime");
+
 function generateBookingId() {
   const random = Math.floor(100 + Math.random() * 900);
 
@@ -37,6 +39,7 @@ function createBooking(intent, matchedProviders, decision) {
   }
 
   const selectedProvider = matchedProviders[0];
+  const bookingTime = resolveBookingTime(intent.time, selectedProvider);
 
   const booking = {
     bookingId: generateBookingId(),
@@ -47,7 +50,13 @@ function createBooking(intent, matchedProviders, decision) {
 
     location: intent.location,
 
-    scheduledTime: intent.time,
+    scheduledTime: bookingTime.scheduledTime,
+
+    scheduledAt: bookingTime.scheduledAt,
+
+    timeWasProvided: bookingTime.timeWasProvided,
+
+    timeDecisionReason: bookingTime.timeDecisionReason,
 
     estimatedCost: generateEstimatedCost(selectedProvider.service),
 
@@ -62,7 +71,8 @@ function createBooking(intent, matchedProviders, decision) {
 
     confirmationMessage:
       `Booking confirmed! ${selectedProvider.name} ` +
-      `will contact you shortly for ${intent.service} service.`,
+      `will contact you shortly for ${intent.service} service. ` +
+      `Scheduled for ${bookingTime.scheduledTime}.`,
   };
 
   return booking;
