@@ -28,10 +28,11 @@ export const shadow = {
 
 export function statusLabel(status) {
   const labels = {
-    confirmed: "Confirmed",
-    provider_assigned: "Assigned",
+    confirmed: "Found",
+    provider_assigned: "Confirmed",
     provider_on_the_way: "On the way",
     completed: "Completed",
+    cancelled: "Cancelled",
     failed: "Needs review",
   };
 

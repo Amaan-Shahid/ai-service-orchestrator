@@ -4,6 +4,7 @@ import {
   ActivityIndicator,
   Alert,
   Pressable,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -12,7 +13,9 @@ import {
   useWindowDimensions,
 } from "react-native";
 
-import API, { getApiBaseURL, getErrorMessage } from "../services/api";
+import API, { getErrorMessage } from "../services/api";
+import { syncOutOfAppNotifications } from "../services/notifications";
+import { clearSession, saveSession } from "../services/session";
 import { colors, shadow, statusLabel } from "./theme";
 
 const navItems = [
@@ -48,6 +51,9 @@ const providerServices = [
   "Tutor",
   "Beautician",
 ];
+
+const brandName = "Servio";
+const brandInitials = "SO";
 
 const themeOptions = [
   {
@@ -162,9 +168,9 @@ function ShellNav({ activeSection, setActiveSection, isWide, palette }) {
       >
         <View style={styles.brandRow}>
           <View style={[styles.brandMark, { backgroundColor: palette.primary }]}>
-            <Text style={styles.brandMarkText}>LA</Text>
+            <Text style={styles.brandMarkText}>{brandInitials}</Text>
           </View>
-          <Text style={[styles.brandText, { color: palette.text }]}>Local AI</Text>
+          <Text style={[styles.brandText, { color: palette.text }]}>{brandName}</Text>
         </View>
         <Text style={[styles.navSectionLabel, { color: palette.muted }]}>
           Navigation
@@ -185,9 +191,9 @@ function ShellNav({ activeSection, setActiveSection, isWide, palette }) {
         <View
           style={[styles.brandMarkSmall, { backgroundColor: palette.primary }]}
         >
-          <Text style={styles.brandMarkText}>LA</Text>
+          <Text style={styles.brandMarkText}>{brandInitials}</Text>
         </View>
-        <Text style={[styles.brandText, { color: palette.text }]}>Local AI</Text>
+        <Text style={[styles.brandText, { color: palette.text }]}>{brandName}</Text>
       </View>
       <ScrollView
         horizontal
@@ -210,6 +216,7 @@ export default function HomeScreen({ route, navigation }) {
   const [message, setMessage] = useState("");
   const [bookings, setBookings] = useState([]);
   const [providers, setProviders] = useState([]);
+  const [notifications, setNotifications] = useState([]);
   const [providerFilter, setProviderFilter] = useState("All");
   const [selectedTheme, setSelectedTheme] = useState("midnight");
   const [currentPassword, setCurrentPassword] = useState("");
@@ -233,7 +240,10 @@ export default function HomeScreen({ route, navigation }) {
   const palette = activeTheme.palette;
 
   const activeBookings = useMemo(
-    () => bookings.filter((item) => item.status !== "completed").length,
+    () =>
+      bookings.filter(
+        (item) => !["completed", "cancelled", "failed"].includes(item.status)
+      ).length,
     [bookings]
   );
 
@@ -276,6 +286,29 @@ export default function HomeScreen({ route, navigation }) {
     }
   }, [username]);
 
+  const loadNotifications = useCallback(async (silent = false) => {
+    if (!username) {
+      return;
+    }
+
+    try {
+      const res = await API.get("/notifications", {
+        params: {
+          role: "user",
+          username,
+        },
+      });
+
+      const nextNotifications = res.data.notifications || [];
+      setNotifications(nextNotifications);
+      syncOutOfAppNotifications(account, nextNotifications).catch(() => {});
+    } catch (error) {
+      if (!silent) {
+        Alert.alert("Could not load notifications", getErrorMessage(error));
+      }
+    }
+  }, [account, username]);
+
   const loadProviders = useCallback(async () => {
     setProvidersLoading(true);
 
@@ -291,8 +324,17 @@ export default function HomeScreen({ route, navigation }) {
 
   useEffect(() => {
     loadBookings();
+    loadNotifications();
     loadProviders();
-  }, [loadBookings, loadProviders]);
+  }, [loadBookings, loadNotifications, loadProviders]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      loadNotifications(true);
+    }, 15000);
+
+    return () => clearInterval(timer);
+  }, [loadNotifications]);
 
   async function handleBooking() {
     if (!message.trim()) {
@@ -318,6 +360,18 @@ export default function HomeScreen({ route, navigation }) {
 
       setMessage("");
       setBookings((current) => [res.data.savedBooking, ...current]);
+      if (Array.isArray(res.data.notifications)) {
+        const nextNotifications = [
+          ...res.data.notifications,
+          ...notifications.filter(
+            (notification) =>
+              !res.data.notifications.some((item) => item.id === notification.id)
+          ),
+        ];
+
+        setNotifications(nextNotifications);
+        syncOutOfAppNotifications(account, nextNotifications).catch(() => {});
+      }
       setActiveSection("bookings");
     } catch (error) {
       if (error?.response?.status === 404) {
@@ -345,8 +399,26 @@ export default function HomeScreen({ route, navigation }) {
       setBookings((current) =>
         current.map((item) => (item.id === booking.id ? res.data.booking : item))
       );
+      loadNotifications();
     } catch (error) {
       Alert.alert("Could not update booking", getErrorMessage(error));
+    }
+  }
+
+  async function cancelBooking(booking) {
+    try {
+      const res = await API.patch(`/bookings/${booking.id}/status`, {
+        role: "user",
+        username,
+        status: "cancelled",
+      });
+
+      setBookings((current) =>
+        current.map((item) => (item.id === booking.id ? res.data.booking : item))
+      );
+      loadNotifications();
+    } catch (error) {
+      Alert.alert("Could not cancel booking", getErrorMessage(error));
     }
   }
 
@@ -410,6 +482,10 @@ export default function HomeScreen({ route, navigation }) {
 
       setAccount(updatedAccount);
       navigation?.setParams({ account: updatedAccount });
+      await saveSession({
+        account: updatedAccount,
+        token: route.params?.token,
+      });
       setProfileMessage("Profile updated successfully.");
     } catch (error) {
       setProfileError(getErrorMessage(error));
@@ -418,9 +494,15 @@ export default function HomeScreen({ route, navigation }) {
     }
   }
 
+  async function handleLogout() {
+    await clearSession();
+    navigation.replace("Login");
+  }
+
   function renderBooking(item) {
     const activeIndex = steps.indexOf(item.status);
     const canComplete = item.status === "provider_on_the_way";
+    const canCancel = !["completed", "cancelled", "failed"].includes(item.status);
 
     return (
       <View
@@ -462,6 +544,8 @@ export default function HomeScreen({ route, navigation }) {
           />
         </View>
 
+        <ReasoningList palette={palette} reasoning={item.reasoning} />
+
         <View style={styles.steps}>
           {steps.map((step, index) => (
             <View key={step} style={styles.stepItem}>
@@ -487,15 +571,29 @@ export default function HomeScreen({ route, navigation }) {
           ))}
         </View>
 
-        {canComplete && (
-          <Pressable
-            style={[styles.secondaryButton, { borderColor: palette.primary }]}
-            onPress={() => completeBooking(item)}
-          >
-            <Text style={[styles.secondaryButtonText, { color: palette.text }]}>
-              Confirm Completed
-            </Text>
-          </Pressable>
+        {(canComplete || canCancel) && (
+          <View style={styles.bookingActions}>
+            {canComplete && (
+              <Pressable
+                style={[styles.secondaryButton, { borderColor: palette.primary }]}
+                onPress={() => completeBooking(item)}
+              >
+                <Text style={[styles.secondaryButtonText, { color: palette.text }]}>
+                  Confirm Completed
+                </Text>
+              </Pressable>
+            )}
+            {canCancel && (
+              <Pressable
+                style={[styles.secondaryButton, { borderColor: colors.danger }]}
+                onPress={() => cancelBooking(item)}
+              >
+                <Text style={[styles.secondaryButtonText, { color: colors.danger }]}>
+                  Cancel Booking
+                </Text>
+              </Pressable>
+            )}
+          </View>
         )}
       </View>
     );
@@ -591,12 +689,16 @@ export default function HomeScreen({ route, navigation }) {
           </View>
           <Pressable
             style={[styles.ghostButton, { borderColor: palette.border }]}
-            onPress={loadBookings}
+            onPress={() => {
+              loadBookings();
+              loadNotifications();
+            }}
           >
             <Text style={[styles.ghostButtonText, { color: palette.accent }]}>
               {refreshing ? "Refreshing..." : "Refresh bookings"}
             </Text>
           </Pressable>
+          <NotificationList palette={palette} notifications={notifications} />
           <View style={styles.stack}>
             {bookings.length ? (
               bookings.map(renderBooking)
@@ -604,7 +706,7 @@ export default function HomeScreen({ route, navigation }) {
               <EmptyState
                 palette={palette}
                 title="No bookings yet"
-                text="Create a new request and confirmed jobs will appear here."
+                text="Create a new request and found providers will appear here."
               />
             )}
           </View>
@@ -682,7 +784,7 @@ export default function HomeScreen({ route, navigation }) {
             palette={palette}
             eyebrow="Preferences"
             title="Personalize your workspace"
-            subtitle="Choose a visual theme style, update your password, and review the API endpoint used by this deployment."
+            subtitle="Choose a visual theme style, update your profile, and manage account access."
           />
           <View style={styles.settingsGrid}>
             {themeOptions.map((theme) => (
@@ -864,19 +966,12 @@ export default function HomeScreen({ route, navigation }) {
               )}
             </Pressable>
           </View>
-          <View
-            style={[
-              styles.endpointCard,
-              { backgroundColor: palette.surface, borderColor: palette.border },
-            ]}
+          <Pressable
+            style={[styles.logoutButton, { borderColor: palette.border }]}
+            onPress={handleLogout}
           >
-            <Text style={[styles.detailLabel, { color: palette.muted }]}>
-              API endpoint
-            </Text>
-            <Text style={[styles.endpointText, { color: palette.text }]}>
-              {getApiBaseURL()}
-            </Text>
-          </View>
+            <Text style={styles.logoutButtonText}>Logout</Text>
+          </Pressable>
         </View>
       );
     }
@@ -1037,6 +1132,69 @@ function Detail({ label, value, palette }) {
   );
 }
 
+function ReasoningList({ reasoning, palette }) {
+  const reasons = Array.isArray(reasoning)
+    ? reasoning.filter(Boolean)
+    : reasoning
+      ? [reasoning]
+      : [];
+
+  if (!reasons.length) {
+    return null;
+  }
+
+  return (
+    <View
+      style={[
+        styles.reasoningBox,
+        { backgroundColor: palette.nav, borderColor: palette.border },
+      ]}
+    >
+      <Text style={[styles.detailLabel, { color: palette.muted }]}>Reasoning</Text>
+      {reasons.map((reason, index) => (
+        <View key={`${reason}-${index}`} style={styles.reasonRow}>
+          <View style={[styles.reasonDot, { backgroundColor: palette.accent }]} />
+          <Text style={[styles.reasonText, { color: palette.text }]}>{reason}</Text>
+        </View>
+      ))}
+    </View>
+  );
+}
+
+function NotificationList({ notifications, palette }) {
+  const latestNotifications = Array.isArray(notifications)
+    ? notifications.slice(0, 4)
+    : [];
+
+  if (!latestNotifications.length) {
+    return null;
+  }
+
+  return (
+    <View
+      style={[
+        styles.notificationPanel,
+        { backgroundColor: palette.surface, borderColor: palette.border },
+      ]}
+    >
+      <Text style={[styles.notificationTitle, { color: palette.text }]}>
+        Notifications
+      </Text>
+      {latestNotifications.map((notification) => (
+        <View
+          key={notification.id}
+          style={[styles.notificationItem, { borderTopColor: palette.border }]}
+        >
+          <View style={[styles.notificationDot, { backgroundColor: palette.accent }]} />
+          <Text style={[styles.notificationText, { color: palette.muted }]}>
+            {notification.message}
+          </Text>
+        </View>
+      ))}
+    </View>
+  );
+}
+
 function MiniMetric({ label, value, palette }) {
   return (
     <View style={[styles.miniMetric, { backgroundColor: palette.nav }]}>
@@ -1093,7 +1251,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     paddingBottom: 10,
     paddingHorizontal: 14,
-    paddingTop: 14,
+    paddingTop: Platform.select({ android: 44, ios: 56, default: 28 }),
   },
   topNavScroll: {
     gap: 8,
@@ -1185,6 +1343,8 @@ const styles = StyleSheet.create({
   content: {
     flexGrow: 1,
     padding: 18,
+    paddingBottom: 42,
+    paddingTop: 26,
   },
   hero: {
     ...shadow,
@@ -1428,6 +1588,62 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "800",
   },
+  reasoningBox: {
+    borderRadius: 8,
+    borderWidth: 1,
+    gap: 8,
+    marginTop: 12,
+    padding: 11,
+  },
+  reasonRow: {
+    alignItems: "flex-start",
+    flexDirection: "row",
+    gap: 8,
+  },
+  reasonDot: {
+    borderRadius: 3,
+    height: 6,
+    marginTop: 7,
+    width: 6,
+  },
+  reasonText: {
+    flex: 1,
+    fontSize: 13,
+    fontWeight: "700",
+    lineHeight: 19,
+  },
+  notificationPanel: {
+    ...shadow,
+    borderRadius: 8,
+    borderWidth: 1,
+    marginBottom: 14,
+    padding: 14,
+  },
+  notificationTitle: {
+    fontSize: 16,
+    fontWeight: "900",
+    marginBottom: 4,
+  },
+  notificationItem: {
+    alignItems: "flex-start",
+    borderTopWidth: 1,
+    flexDirection: "row",
+    gap: 9,
+    marginTop: 10,
+    paddingTop: 10,
+  },
+  notificationDot: {
+    borderRadius: 4,
+    height: 8,
+    marginTop: 6,
+    width: 8,
+  },
+  notificationText: {
+    flex: 1,
+    fontSize: 13,
+    fontWeight: "700",
+    lineHeight: 19,
+  },
   steps: {
     flexDirection: "row",
     gap: 6,
@@ -1458,8 +1674,13 @@ const styles = StyleSheet.create({
     borderColor: colors.primary,
     borderRadius: 8,
     borderWidth: 1,
-    marginTop: 14,
+    flex: 1,
     padding: 13,
+  },
+  bookingActions: {
+    flexDirection: "row",
+    gap: 10,
+    marginTop: 14,
   },
   secondaryButtonText: {
     color: colors.text,
@@ -1665,18 +1886,20 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     marginTop: 10,
   },
-  endpointCard: {
-    backgroundColor: colors.surface,
+  logoutButton: {
+    alignItems: "center",
     borderColor: colors.border,
     borderRadius: 8,
     borderWidth: 1,
     marginTop: 14,
-    padding: 15,
+    minHeight: 50,
+    justifyContent: "center",
+    padding: 13,
   },
-  endpointText: {
-    color: colors.text,
-    fontWeight: "800",
-    lineHeight: 20,
+  logoutButtonText: {
+    color: colors.danger,
+    fontSize: 15,
+    fontWeight: "900",
   },
   emptyCard: {
     alignItems: "center",

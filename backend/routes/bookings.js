@@ -4,6 +4,9 @@ const {
   listBookings,
   updateBookingStatus,
 } = require("../services/firestoreService");
+const {
+  schedulePendingNotifications,
+} = require("../services/notificationScheduler");
 
 const router = express.Router();
 
@@ -75,6 +78,9 @@ router.patch("/:id/status", async (req, res) => {
       actorRole: role,
       username,
       providerId,
+    });
+    schedulePendingNotifications().catch((error) => {
+      console.error("Failed to schedule status notification:", error);
     });
 
     res.json({

@@ -70,8 +70,8 @@ function createBooking(intent, matchedProviders, decision) {
     reasoning: decision?.reasoning || [],
 
     confirmationMessage:
-      `Booking confirmed! ${selectedProvider.name} ` +
-      `will contact you shortly for ${intent.service} service. ` +
+      `Provider found! ${selectedProvider.name} ` +
+      `has been matched for your ${intent.service} service. ` +
       `Scheduled for ${bookingTime.scheduledTime}.`,
   };
 

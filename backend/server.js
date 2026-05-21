@@ -4,6 +4,7 @@ require("dotenv").config();
 const analyzeRoutes = require("./routes/analyze");
 const authRoutes = require("./routes/auth");
 const bookingRoutes = require("./routes/bookings");
+const notificationRoutes = require("./routes/notifications");
 const providerRoutes = require("./routes/providers");
 const {
   startNotificationScheduler,
@@ -19,15 +20,17 @@ app.use(express.json());
 app.use("/api/analyze", analyzeRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/bookings", bookingRoutes);
+app.use("/api/notifications", notificationRoutes);
 app.use("/api/providers", providerRoutes);
-
-// Test Route
-app.get("/", (req, res) => {
-  res.send("Backend Working");
-});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-
   startNotificationScheduler();
+});
+
+app.get("/", (req, res) => {
+  res.json({
+    message:
+      "AI Service Orchestrator API Running",
+  });
 });

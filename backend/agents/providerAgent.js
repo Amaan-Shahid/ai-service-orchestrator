@@ -10,6 +10,28 @@ function compactText(text) {
   return normalizeText(text).replace(/[^a-z0-9]/g, "");
 }
 
+function normalizeLocationText(location) {
+  return normalizeText(location)
+    .replace(/\b([a-z])\s*[- ]?\s*(\d{1,2})\b/g, "$1-$2")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function parseSector(location) {
+  const normalizedLocation = normalizeLocationText(location);
+  const match = normalizedLocation.match(/\b([a-z])-(\d{1,2})\b/);
+
+  if (!match) {
+    return null;
+  }
+
+  return {
+    letter: match[1].toUpperCase(),
+    number: Number(match[2]),
+    label: `${match[1].toUpperCase()}-${Number(match[2])}`,
+  };
+}
+
 const serviceAliases = {
   "AC Technician": [
     "ac",
@@ -70,11 +92,53 @@ function canonicalService(service) {
 }
 
 function canonicalLocation(location) {
+  const sector = parseSector(location);
+
+  if (sector) {
+    const sectorMatch = [...new Set(providers.map((provider) => provider.location))].find(
+      (providerLocation) => parseSector(providerLocation)?.label === sector.label
+    );
+
+    if (sectorMatch) {
+      return sectorMatch;
+    }
+  }
+
   const compactLocation = compactText(location);
 
   return [...new Set(providers.map((provider) => provider.location))].find(
     (providerLocation) => compactLocation.includes(compactText(providerLocation))
   );
+}
+
+function calculateLocationDistance(requestedLocation, providerLocation) {
+  const requestedSector = parseSector(requestedLocation);
+  const providerSector = parseSector(providerLocation);
+
+  if (requestedSector && providerSector) {
+    const letterDistance = Math.abs(
+      requestedSector.letter.charCodeAt(0) - providerSector.letter.charCodeAt(0)
+    );
+    const numberDistance = Math.abs(requestedSector.number - providerSector.number);
+
+    return letterDistance * 4 + numberDistance;
+  }
+
+  const compactRequested = compactText(requestedLocation);
+  const compactProvider = compactText(providerLocation);
+
+  if (!compactRequested || !compactProvider) {
+    return 50;
+  }
+
+  if (
+    compactRequested.includes(compactProvider) ||
+    compactProvider.includes(compactRequested)
+  ) {
+    return 0;
+  }
+
+  return 25;
 }
 
 function calculateScore(provider) {
@@ -102,7 +166,7 @@ function matchProviders(intent) {
   const matchedService = canonicalService(service);
   const matchedLocation = canonicalLocation(location);
 
-  if (!matchedService || !matchedLocation) {
+  if (!matchedService) {
     return [];
   }
 
@@ -114,7 +178,13 @@ function matchProviders(intent) {
     .map((provider) => ({
       ...provider,
       score: calculateScore(provider),
-      locationMatch: provider.location === matchedLocation,
+      locationMatch: matchedLocation
+        ? provider.location === matchedLocation
+        : calculateLocationDistance(location, provider.location) === 0,
+      locationDistance: calculateLocationDistance(
+        matchedLocation || location,
+        provider.location
+      ),
     }));
 
   const exactLocationProviders = availableServiceProviders.filter(
@@ -126,7 +196,13 @@ function matchProviders(intent) {
       ? exactLocationProviders
       : availableServiceProviders;
 
-  matchedProviders.sort((a, b) => b.score - a.score);
+  matchedProviders.sort((a, b) => {
+    if (a.locationDistance !== b.locationDistance) {
+      return a.locationDistance - b.locationDistance;
+    }
+
+    return b.score - a.score;
+  });
 
   return matchedProviders;
 }

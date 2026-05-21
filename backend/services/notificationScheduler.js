@@ -1,4 +1,7 @@
 const db = require("../config/firebase");
+const {
+  sendPushNotification,
+} = require("./pushService");
 
 const MAX_TIMEOUT_MS = 2147483647;
 const POLL_INTERVAL_MS = Number(process.env.NOTIFICATION_POLL_INTERVAL_MS) || 60000;
@@ -24,6 +27,16 @@ function toDate(value) {
 }
 
 async function markNotificationSent(notificationId, notification) {
+  let pushResult = {
+    sent: 0,
+  };
+
+  try {
+    pushResult = await sendPushNotification(notification);
+  } catch (error) {
+    console.error("Push Notification Error:", error);
+  }
+
   await db.runTransaction(async (transaction) => {
     const notificationRef = db.collection("notifications").doc(notificationId);
     const snapshot = await transaction.get(notificationRef);
@@ -36,6 +49,7 @@ async function markNotificationSent(notificationId, notification) {
       status: "sent",
       sentAt: new Date(),
       deliveryAttempts: (snapshot.data().deliveryAttempts || 0) + 1,
+      pushSent: pushResult.sent || 0,
     });
   });
 

@@ -9,7 +9,9 @@ const {
   saveBooking,
   saveNotifications,
 } = require("../services/firestoreService");
-const { scheduleNotifications } = require("../services/notificationScheduler");
+const {
+  scheduleNotifications,
+} = require("../services/notificationScheduler");
 
 const router = express.Router();
 
@@ -56,7 +58,6 @@ router.post("/", async (req, res) => {
       savedBooking,
       notifications
     );
-
     scheduleNotifications(savedNotifications);
 
     res.json({

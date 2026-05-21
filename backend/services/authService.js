@@ -314,10 +314,11 @@ async function changePassword({ username, role, currentPassword, newPassword }) 
   };
 }
 
-async function updateProfile({ username, role, name, phone }) {
+async function updateProfile({ username, role, name, phone, location }) {
   const normalizedUsername = normalizeUsername(username);
   const trimmedName = name?.trim();
   const trimmedPhone = phone?.trim();
+  const trimmedLocation = location?.trim();
 
   if (
     !normalizedUsername ||
@@ -349,6 +350,7 @@ async function updateProfile({ username, role, name, phone }) {
       ...account.provider,
       name: trimmedName,
       phone: trimmedPhone,
+      location: trimmedLocation || account.provider.location,
     };
   }
 

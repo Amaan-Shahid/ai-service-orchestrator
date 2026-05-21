@@ -11,7 +11,6 @@ function createScheduledNotifications(booking) {
   }
 
   const reminder1Hour = new Date(scheduledAt.getTime() - 60 * 60 * 1000);
-  const providerArrival = scheduledAt;
   const reminderScheduledFor = reminder1Hour > now ? reminder1Hour : now;
   const reminderMessage =
     reminder1Hour > now
@@ -20,20 +19,24 @@ function createScheduledNotifications(booking) {
 
   return [
     {
+      type: "provider_found",
+      scheduledFor: now,
+      status: "scheduled",
+      channel: "in_app",
+      recipientRole: "provider",
+      recipientProviderId: booking.provider.id,
+      message:
+        `New ${booking.service} booking found for ${booking.location || "your area"}.`,
+    },
+
+    {
       type: "reminder",
       scheduledFor: reminderScheduledFor,
       status: "scheduled",
       channel: "in_app",
+      recipientRole: "user",
+      recipientUsername: booking.customer?.username || null,
       message: reminderMessage,
-    },
-
-    {
-      type: "provider_on_the_way",
-      scheduledFor: providerArrival,
-      status: "scheduled",
-      channel: "in_app",
-      message:
-        `${booking.provider.name} is scheduled to arrive for your ${booking.service} service.`,
     },
   ];
 }

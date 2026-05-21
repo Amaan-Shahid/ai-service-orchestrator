@@ -12,7 +12,9 @@ import {
   View,
 } from "react-native";
 
-import API, { getApiBaseURL, getErrorMessage } from "../services/api";
+import API, { getErrorMessage } from "../services/api";
+import { registerForPushNotifications } from "../services/notifications";
+import { saveSession } from "../services/session";
 import { colors, shadow } from "./theme";
 
 const services = [
@@ -28,18 +30,19 @@ const services = [
 ];
 
 const emptyProviderProfile = {
-  name: "",
   service: "AC Technician",
   location: "",
-  rating: "4.7",
-  service_radius_km: "5",
+  rating: "",
+  service_radius_km: "",
   available: true,
-  experience_years: "3",
-  languages: "Urdu, English",
-  phone: "",
-  response_time_minutes: "30",
-  completed_jobs: "0",
+  experience_years: "",
+  languages: "",
+  response_time_minutes: "",
+  completed_jobs: "",
 };
+
+const brandName = "Servio";
+const brandInitials = "SO";
 
 export default function LoginScreen({ navigation }) {
   const [mode, setMode] = useState("login");
@@ -91,11 +94,9 @@ export default function LoginScreen({ navigation }) {
     if (
       isRegistering &&
       role === "provider" &&
-      (!providerProfile.name.trim() ||
-        !providerProfile.phone.trim() ||
-        !providerProfile.location.trim())
+      !providerProfile.location.trim()
     ) {
-      setFormError("Provider name, phone, and service area are required.");
+      setFormError("Service area is required for provider registration.");
       return;
     }
 
@@ -113,7 +114,8 @@ export default function LoginScreen({ navigation }) {
               role === "provider"
                 ? {
                     ...providerProfile,
-                    phone: providerProfile.phone.trim(),
+                    name: name.trim(),
+                    phone: phone.trim(),
                   }
                 : undefined,
           }
@@ -128,7 +130,7 @@ export default function LoginScreen({ navigation }) {
         payload
       );
 
-      openApp(res.data);
+      await openApp(res.data);
     } catch (error) {
       const message = getErrorMessage(error);
       setFormError(
@@ -141,8 +143,10 @@ export default function LoginScreen({ navigation }) {
     }
   }
 
-  function openApp(authResult) {
+  async function openApp(authResult) {
     const account = authResult.account;
+    await saveSession(authResult);
+    registerForPushNotifications(account).catch(() => {});
 
     navigation.replace(account.role === "provider" ? "Provider" : "Customer", {
       account,
@@ -166,9 +170,9 @@ export default function LoginScreen({ navigation }) {
       >
         <View style={styles.brandRow}>
           <View style={styles.brandMark}>
-            <Text style={styles.brandMarkText}>LA</Text>
+            <Text style={styles.brandMarkText}>{brandInitials}</Text>
           </View>
-          <Text style={styles.brandText}>Local AI</Text>
+          <Text style={styles.brandText}>{brandName}</Text>
         </View>
 
         <View style={styles.hero}>
@@ -181,31 +185,6 @@ export default function LoginScreen({ navigation }) {
               Sign in or register to book providers, track jobs, and manage
               service requests from one professional dashboard.
             </Text>
-          </View>
-
-          <View style={styles.progressCard}>
-            {["Request", "AI Analysis", "Providers", "Booking"].map(
-              (step, index) => (
-                <View key={step} style={styles.progressStep}>
-                  <View
-                    style={[
-                      styles.progressDot,
-                      index === 0 && styles.activeProgressDot,
-                    ]}
-                  >
-                    <Text style={styles.progressDotText}>{index + 1}</Text>
-                  </View>
-                  <Text
-                    style={[
-                      styles.progressText,
-                      index === 0 && styles.activeProgressText,
-                    ]}
-                  >
-                    {step}
-                  </Text>
-                </View>
-              )
-            )}
           </View>
         </View>
 
@@ -298,13 +277,6 @@ export default function LoginScreen({ navigation }) {
           {isRegistering && role === "provider" && (
             <View style={styles.providerPanel}>
               <Text style={styles.sectionLabel}>Provider profile</Text>
-              <TextInput
-                placeholder="Provider display name"
-                placeholderTextColor="#706F99"
-                value={providerProfile.name}
-                onChangeText={(value) => updateProviderProfile("name", value)}
-                style={styles.input}
-              />
 
               <Text style={styles.fieldLabel}>Service type</Text>
               <ScrollView
@@ -340,14 +312,6 @@ export default function LoginScreen({ navigation }) {
                 placeholderTextColor="#706F99"
                 value={providerProfile.location}
                 onChangeText={(value) => updateProviderProfile("location", value)}
-                style={styles.input}
-              />
-              <TextInput
-                placeholder="Provider phone"
-                placeholderTextColor="#706F99"
-                value={providerProfile.phone}
-                onChangeText={(value) => updateProviderProfile("phone", value)}
-                keyboardType="phone-pad"
                 style={styles.input}
               />
 
@@ -441,7 +405,6 @@ export default function LoginScreen({ navigation }) {
           </Pressable>
         </View>
 
-        <Text style={styles.apiText}>API endpoint: {getApiBaseURL()}</Text>
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -455,6 +418,7 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     padding: 20,
+    paddingTop: Platform.select({ android: 44, ios: 56, default: 32 }),
   },
   brandRow: {
     alignItems: "center",
@@ -479,9 +443,9 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 22,
     fontWeight: "900",
+    lineHeight: 30,
   },
   hero: {
-    gap: 14,
     marginBottom: 18,
   },
   heroCopy: {
@@ -508,51 +472,6 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     marginTop: 12,
     maxWidth: 720,
-  },
-  progressCard: {
-    ...shadow,
-    backgroundColor: colors.surface,
-    borderColor: colors.border,
-    borderRadius: 8,
-    borderWidth: 1,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 10,
-    padding: 12,
-  },
-  progressStep: {
-    alignItems: "center",
-    backgroundColor: colors.surfaceMuted,
-    borderRadius: 8,
-    flexDirection: "row",
-    gap: 8,
-    paddingHorizontal: 12,
-    paddingVertical: 9,
-  },
-  progressDot: {
-    alignItems: "center",
-    borderColor: "#3B3A5A",
-    borderRadius: 12,
-    borderWidth: 1,
-    height: 24,
-    justifyContent: "center",
-    width: 24,
-  },
-  activeProgressDot: {
-    backgroundColor: colors.primary,
-    borderColor: colors.primary,
-  },
-  progressDotText: {
-    color: "#FFFFFF",
-    fontSize: 11,
-    fontWeight: "900",
-  },
-  progressText: {
-    color: "#74739A",
-    fontWeight: "800",
-  },
-  activeProgressText: {
-    color: "#FFFFFF",
   },
   card: {
     ...shadow,
@@ -710,11 +629,5 @@ const styles = StyleSheet.create({
   switchLinkText: {
     color: colors.accent,
     fontWeight: "900",
-  },
-  apiText: {
-    color: "#706F99",
-    fontSize: 12,
-    marginTop: 18,
-    textAlign: "center",
   },
 });
