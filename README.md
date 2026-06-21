@@ -66,3 +66,8 @@ cd mobile-app && npx expo lint
 ```
 
 `npx expo lint` requires `eslint` to be installed in the mobile app dependencies.
+
+## Contributers
+
+- [Naseem Ullah](https://github.com/Naseem-Ullahh) 
+- [Amaan Shahid](https://github.com/Amaan-Shahid/) 
